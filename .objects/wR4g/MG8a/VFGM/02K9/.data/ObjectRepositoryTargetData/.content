@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="genB7vyhzUGQnLKw4d7bBQ" Reference="2HNzGrMgqE2vTNIlI6sEcw/02K9t7kxXkmFAhw1-RX_cg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="uat.openinvoice.com/docp/app/ticket/index.html" DesignTimeRectangle="57, 206, 30, 18" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='back' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='back' tag='SPAN' type='' class='' aaname='Back' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Back' /&gt;" Guid="b0d826c2-8ccc-47e3-9eb3-b70ea0ba01ed" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="36, 207, 18, 14" FullSelectorArgument="&lt;webctrl parentid='back' tag='I' /&gt;" Guid="2629de90-b3ce-4186-bf94-2daf15ccf4f1" SearchSteps="Selector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="3673bfe45b35123569ca230cb7d2390d.png" xmlns="">0G44SOCn_xUy2NclcQ_D5VA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

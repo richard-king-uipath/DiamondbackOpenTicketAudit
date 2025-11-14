@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="6yydIsCzEU-wHGkG7lVojQ" Reference="2HNzGrMgqE2vTNIlI6sEcw/Zpu3EERnKkeYnQPKXt2Zsw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="1920, 0, 616, 573" BrowserType="Chrome" ContentHash="Fl_WhZf4rEW-k0WudAqiQg" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADJSURBVDhPY+BmZBAoYGdYsIKL4cNmbob/xGCQWpAekF6Gdg6GA+gKiMUgvQzogqRinAbs1VL4/+3hg/9Xygow5Igy4JiHw/83hw+AMboc0Qb8/viBfANAGATuTZ2AIU6UAQctDcAGkO2Cx0sWgAMRZACIDQpMEAYZTNAAmO2gMPh46QIcg7wDAsiGoBiwQ0oAbBsIgGwHRSVM7kJ6wv/nmzeAMUgdVgNAtoCcDAKgWEB3GTaMYQDIZpBt6ApxYaxhQAqmPDNRmp0BZJzxdpxmwKkAAAAASUVORK5CYII=" Reference="2HNzGrMgqE2vTNIlI6sEcw/Zpu3EERnKkeYnQPKXt2Zsw" Selector="[string.Format(&quot;&lt;html app='chrome.exe' title='{0}' /&gt;&quot;, pdfName)]" Version="V2">
+      <imageRef attrName="InformativeScreenshot" originalValue="7e13ad65552e43a93c5cba32d8d60e74.png" xmlns="">0hoj2lxDZskiJsoXYmugPvw</imageRef>
+    </TargetApp>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData IsVariable="False" Name="pdfName" />
+    </scg:List>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

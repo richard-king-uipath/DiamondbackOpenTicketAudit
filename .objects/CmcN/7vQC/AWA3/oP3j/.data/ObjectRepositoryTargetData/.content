@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="PKXy4xcljkKjYJfcSYnMUg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="s3.amazonaws.com/openinvoice-uat.ba.enverus.com/3665451/receipt/2025-09-09/2bc8e8688a0344d0ae9aafa61269ea5d" CVScreenId="f81bd2e1-9ee5-4c17-a409-dc51d4812f13" CvElementArea="1814, 83, 20, 21" CvType="Icon" DesignTimeRectangle="1812, 81, 24, 25" ElementType="Icon" ElementVisibilityArgument="Interactive" Guid="8727baab-9f5c-4746-9b69-3509d8386047" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAZCAYAAAArK+5dAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAB8SURBVEhL7dDRCYAwDEXRDtY5O1EWygRKCoEQaN9TKir046AEybUttdbjSSUPVtsB6FsBEenyfGYHoPcDrbXO3mMgzmeogKr2pwfiLH+fwYDxhR5glxsqYDxyZbmhA4a992gYYP/UT5bnDgYYtwLxzpHZSYeBVXYA+n/gBJ8HXTnodU5/AAAAAElFTkSuQmCC" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='attachmentView' title='CESTicketReport - All UDFs' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="cecc314de187b761e3f962d93b891b09.png" xmlns="">0aZA2UAUhZEi2Lj8orLCHSw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

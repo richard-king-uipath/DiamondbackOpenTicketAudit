@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome OpenInvoice(2)",
+  "Type": "Screen",
+  "Id": "y_-rPGZsG02pC805nWItyQ",
+  "Reference": "2HNzGrMgqE2vTNIlI6sEcw/y_-rPGZsG02pC805nWItyQ",
+  "ParentRef": "2HNzGrMgqE2vTNIlI6sEcw/YWDZoao300SkimrWLoXwwQ",
+  "Created": "2025-11-10T13:48:52.8538902Z",
+  "Updated": "2025-11-10T13:48:52.8538902Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.14.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

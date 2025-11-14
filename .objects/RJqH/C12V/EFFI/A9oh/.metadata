@@ -1,0 +1,13 @@
+﻿{
+  "Name": "New Tab",
+  "Type": "Element",
+  "Id": "A9ohY-nw5kSNmZmeOhLmeA",
+  "Reference": "2HNzGrMgqE2vTNIlI6sEcw/A9ohY-nw5kSNmZmeOhLmeA",
+  "ParentRef": "2HNzGrMgqE2vTNIlI6sEcw/EFFI-NWSZUmr5pn1ntfi5g",
+  "Created": "2025-11-13T01:53:52.8003525Z",
+  "Updated": "2025-11-13T01:53:52.8003525Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.19.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

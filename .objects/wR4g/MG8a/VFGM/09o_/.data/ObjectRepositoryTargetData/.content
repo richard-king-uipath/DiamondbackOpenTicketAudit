@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="6_OZtLx360WqYKsnCa6fGA" Reference="2HNzGrMgqE2vTNIlI6sEcw/09o_ns3seEm_GUVbZFXbfg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="uat.openinvoice.com/docp/app/ticket/index.html" DesignTimeRectangle="1166, 576, 328, 20" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='attachment-item-label' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;p2p-root&amp;gt;div&amp;gt;div&amp;gt;p2p-receipt-main&amp;gt;div&amp;gt;p2p-receipt-detail-view&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p2p-receipt-detail&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p2p-attachment-item&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='attach_1' tag='DIV' /&gt;" Guid="e074f373-6d63-45eb-a1c7-15d3eb744845" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="6d26b3ab4587038f3ce2fdd557950bc1.png" xmlns="">0CG7NU5ZcXkWBzUhM4SpwSQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

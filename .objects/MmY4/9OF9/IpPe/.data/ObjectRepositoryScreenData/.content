@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="Js0C_unVBUqhD74ltza3xg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="-20, -1088, 1936, 1048" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADnSURBVDhPY2BgYPhPIcYQIBVjCJCKMQT+NzQ0/J88eTIGdnd3x1CL1YD79+//xwZqa2sx1OI1wNfX97+qqiocCwkJYajFa4C+vj6GHAbuPh//P6bT/j+XGNt/78WaYJxx0O1/7lHv/4Er9eFiIKziL4JpQOOBiP+h9db/OUVZ/7tOVwPjwsNB/8tPRvz3W6APFwNhJS9aeAGLAOkGGLgr/p9wPRmO1Q0U/0tLS/8/cODA/6dPn8Jxfn4+umaIAZp2Mv9rdobCsYA4N1hy4cKF/48ePQrHCQkJ6JohBlCIMQRIxRgCJGEAlx9yvKhOkYMAAAAASUVORK5CYII=" Selector="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" Url="https://uat-app.openinvoice.com/ticket/#/ticketList?stackID=856579&amp;navigateFrom=ticketStacks" Version="V2">
+      <imageRef attrName="InformativeScreenshot" originalValue="8ed08bd7815fc132200e58a9a7ef42ab.jpg" xmlns="">0G8MNtpSRLE6apa-2WUOqjw</imageRef>
+    </TargetApp>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

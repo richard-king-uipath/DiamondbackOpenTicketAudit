@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="g7v1Te0E206lU3Fr9sVJQw" Reference="2HNzGrMgqE2vTNIlI6sEcw/VFGMck2fg02qdq47t-BfHw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="1912, -8, 1616, 868" BrowserType="Chrome" ContentHash="fjW7u9Fv7ECh1q8CMwGhaA" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADnSURBVDhPY2BgYPhPIcYQIBVjCJCKMQT+NzQ0/J88eTIGdnd3x1CL1YD79+//xwZqa2sx1OI1wNfX97+qqiocCwkJYajFa4C+vj6GHAbuPh//P6bT/j+XGNt/78WaYJxx0O1/7lHv/4Er9eFiIKziL4JpQOOBiP+h9db/OUVZ/7tOVwPjwsNB/8tPRvz3W6APFwNhJS9aeAGLAOkGGLgr/p9wPRmO1Q0U/0tLS/8/cODA/6dPn8Jxfn4+umaIAZp2Mv9rdobCsYA4N1hy4cKF/48ePQrHCQkJ6JohBlCIMQRIxRgCJGEAlx9yvKhOkYMAAAAASUVORK5CYII=" Reference="2HNzGrMgqE2vTNIlI6sEcw/VFGMck2fg02qdq47t-BfHw" Selector="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" Url="[in_Config(&quot;OpenTicketURL&quot;).ToString]" Version="V2">
+      <imageRef attrName="InformativeScreenshot" originalValue="6d7e7a98484d805bc1153ce2e729f736.jpg" xmlns="">0Gi5KHAzZO0-MUqYscl3fWQ</imageRef>
+    </TargetApp>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1" />
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="n9r-N6mOTUusEtFltBgw9Q" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="uat.openinvoice.com/docp/app/ticket/index.html" DesignTimeRectangle="1166, 452, 328, 20" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='attachment-item-label' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;p2p-root&amp;gt;div&amp;gt;div&amp;gt;p2p-receipt-main&amp;gt;div&amp;gt;p2p-receipt-detail-view&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p2p-receipt-detail&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p2p-attachment-item&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='attach_0' tag='DIV' /&gt;" Guid="e07ba41b-f7c7-4cf9-9a8c-f551d39d9c64" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="17625732e97ed771230ee36a3edd17fc.png" xmlns="">0Ud2hooBGnUWy9w9LtEIKFg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="dpSuC4Q2DUeytd8fE4WR3g" Reference="2HNzGrMgqE2vTNIlI6sEcw/HNnz-kQk50mOQQg0PBNKWg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://uat-app.openinvoice.com/ticket/#/ticketList?navigateFrom=openTicket" ContentHash="WuYmsgyGWUyEDk0vK0l64Q" DesignTimeRectangle="24, 376, 1874, 722" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='mainTable' tag='TABLE' /&gt;&lt;webctrl tag='TBODY' /&gt;" Guid="29f4d1f0-f402-4b64-8f66-509f98d86733" Reference="2HNzGrMgqE2vTNIlI6sEcw/HNnz-kQk50mOQQg0PBNKWg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="b84f88a1d180244574a50987a67d50f5.png" xmlns="">0sb7wMyBf9UqvrWTXADg3uA</imageRef>
+    </TargetAnchorable>
+    <p:InArgument x:TypeArguments="x:String" x:Key="ExtractDataSettings" xml:space="preserve">&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;
+	&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='CurrentElement'&gt;
+		&lt;IsValidName&gt;true&lt;/IsValidName&gt;
+		&lt;ValidationErrorMessage /&gt;
+		&lt;IsExtra&gt;false&lt;/IsExtra&gt;
+		&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;
+		&lt;Format xsi:type='TextColumnFormat' /&gt;
+	&lt;/Column&gt;
+&lt;/Table&gt;</p:InArgument>
+    <x:Null x:Key="NextLinkTarget" />
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

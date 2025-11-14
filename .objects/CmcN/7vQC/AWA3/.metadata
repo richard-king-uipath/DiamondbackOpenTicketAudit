@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome CESTicketReport - All UDFs",
+  "Type": "Screen",
+  "Id": "AWA3BgVom0Ck6zqDna6-cQ",
+  "Reference": "2HNzGrMgqE2vTNIlI6sEcw/AWA3BgVom0Ck6zqDna6-cQ",
+  "ParentRef": "2HNzGrMgqE2vTNIlI6sEcw/7vQCLmqCQUCsSrAFLT7-Zg",
+  "Created": "2025-11-05T19:36:40.0337346Z",
+  "Updated": "2025-11-05T19:36:40.0337346Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.14.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

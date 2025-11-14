@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="hXPSl4LgdUS9q0xlKDaP3w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="uat-app.openinvoice.com/ticket" CVScreenId="ffca6fc4-8719-402d-a66b-347b07a0dece" CvTextArea="30, 143, 103, 21" CvTextArgument="OpenInvoice" CvType="Text" DesignTimeRectangle="23, 134, 109, 36" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl isleaf='1' parentid='primaryNavBar' tag='DIV' /&gt;" Guid="9e03ab8a-6ccc-4b84-a235-2f012e3dded8" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="ef44c6f5406619a5b0d08211c100467d.png" xmlns="">0Fsb_cDFhz0GdGm0UBzCTtQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

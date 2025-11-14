@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Chrome CESTicketReport - All UDFs",
+  "Type": "App",
+  "Id": "CmcNOyVKNkyOD_8BSyNe1Q",
+  "Reference": "2HNzGrMgqE2vTNIlI6sEcw/CmcNOyVKNkyOD_8BSyNe1Q",
+  "Created": "2025-11-05T19:36:39.8029569Z",
+  "Updated": "2025-11-05T19:36:39.8029569Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.14.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

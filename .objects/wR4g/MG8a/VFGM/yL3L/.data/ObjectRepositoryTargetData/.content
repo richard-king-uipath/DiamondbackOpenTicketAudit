@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="TaUakafr40yaVAgdajPVzw" Reference="2HNzGrMgqE2vTNIlI6sEcw/yL3L8WOXgkafGCMEjJk4YQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="uat.openinvoice.com/docp/app/ticket/index.html" DesignTimeRectangle="8, 118, 0, 0" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-labelledby='currencyLabel' parentid='ticketHeaderCollapse' tag='P' /&gt;" Guid="4c532b13-1ef5-42f7-a569-7e2d9f70fa36" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="50, 371, 41, 26" Guid="e5b37d30-7cc5-4b01-8ed8-fb610de6fa04" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACkAAAAaCAYAAAAqjnX1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGDSURBVFhH7ZQxa8JAGIb9TweBbIFCwCFQqASaqU7N5ObSo0soiENxaegsN4mLu6Qg6JIOUqGgSwuCg3BTwCEgvCUJxhhMK+FaLNwDGe77Li8PuS9XwT+gki+cI1JSFFJSFFJSFDnJFdg1AR0dVuNO1wK5H6frYMbQvNJACAEhKrQbit402O2Oc5Je8qgXNdiPHlZhGnEy5STXA9iKhU4qFYK/MjTMNvxY4kjO5gPeQw1q1cF499qJlJMcURDDxTy/KaUoJ4B3p0Fr+fnGt5ST3Izh6ASqScGGc6yC/BkW5+DdhaE42A/Oz5STjIiO77mJejWZS/XShjs5nMljOVgyWIT+kWSWDYffbUAnBtxFVCjOEfAlOQa3BPU+PywD8FsajKfMFG6z3YisWJGkkJkEwokDXW+gt9jNWQg+pNAVC2yZVHjfhma24X3uZzGYdmApNgbraHVEUtzfncBfOrDzd+Ask7wN8Nan6TzGe8wmWLrnV+/J80RKikJKikJKikJKiuILsrvoxU388n0AAAAASUVORK5CYII=" SearchSteps="Image" TargetType="ImageBased" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="a19918001806ba9067caccf481071a2b.png" xmlns="">0rtJI8uB3_0CIeheUNUD_Ng</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

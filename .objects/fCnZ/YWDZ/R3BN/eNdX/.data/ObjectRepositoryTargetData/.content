@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="lYDy36UFr0-buNcIA7qJLQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="uat.openinvoice.com/docp/app/ticket/index.html" CVScreenId="fc6d9e8b-fe8d-4262-bd19-4e6f17ca9bd3" CvElementArea="39, 411, 86, 33" CvTextArea="50, 420, 64, 11" CvTextArgument="Edit Header" CvType="Button" DesignTimeRectangle="40, 412, 84, 30" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='editHeaderBtn' parentid='ticketHeaderCollapse' tag='A' /&gt;" Guid="df7a44ed-9a84-4247-833e-f2d8d429b651" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="f591c973959b45da61a4774c270b8e1d.png" xmlns="">0TIipCyS1DUigurDKV_IJ8A</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

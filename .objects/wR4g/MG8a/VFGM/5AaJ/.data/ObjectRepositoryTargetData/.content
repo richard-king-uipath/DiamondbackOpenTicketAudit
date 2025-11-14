@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="ei1xunql50eQxKkhrRlw8w" Reference="2HNzGrMgqE2vTNIlI6sEcw/5AaJlDOwB0-MqqM-ap7d9w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="uat.openinvoice.com/docp/app/ticket/index.html" DesignTimeRectangle="8, 118, 0, 0" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-labelledby='serviceDateLabel' parentid='ticketHeaderCollapse' tag='P' /&gt;" Guid="830ec80c-6d16-404f-b8a0-adbcd3708d49" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="49, 287, 93, 19" Guid="a34eaf69-0213-4b6e-acc7-90e666bae3ed" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF0AAAATCAYAAADyIwHfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPRSURBVFhH7Ze9a+NIGMb3fxoIqBs4EKQQLMQceMCwZgubLVxFGE64MYHghXBNRCovGLGFCSxOcfggaCGga5wiqFhQYFFgwUVAEBC4EBieY2YkWx7JyZr9cKMfCDQz0juvHr3zaPQKFb+dV2pHxa+nEn0PbBE9hj8yUaMEhBDQxgDuY8n4H5oYJ7SG9pmLaJm/BsDChdkaI+LnywjuaRNU4zE1GMcO/Fi5PiX+bIESAjaaq0MILhgGtwCefIx7WTwCemTCuVMCProYvKHQeI6aAXPkY+OKl2LcWPL5lKMsr10oFX3+kUFr2PCfZJuLoB+YmKb5RJ/aILoFNx3HIsCwQaCf+asYnORfE+1PXPIE3okOvTvBPBEjCD8wkNc2AvVFxS4snYHVyx4ugF0fwEeEyTsD5lWIJL0/+ToEOzBg36eXLjz0dR3m1RxyylDkaJwH6QXfEYOLXnegZvGjFEVfzjCgBuwvm91ej8C4kAl7J/nkJfFVB6Q1kVUtiDBumXAXvOLGaBITU36+Yg6nTmBeC0lSYng9HWwUwu2ViH47AEtzKJLA7RKwj/Ke6LIJcjyVgmd8c8AO0pxK2Yzx+0R/GKJGLHhKN69a0kgTeHDQpDX0r0PEiwTRrYPOoY7+TW5pPo7R7rryoT+XJx+cGyAn65niGwt6w0G4lC9ZFX12ytZVqCKKhWJwJ5vuX8X7xUoxCPr/Kd0ZSgwh+p99DDNb1CiavQnCjTe5O0XR+URHQ4Rl/Tnhkq8TdHQCjVIQwvD33brGOSvv5TU9YiDZC8gh+nup6NwODhmcB9ksiJ7/PhSQK2RVFKWraN1v3SjdAjUGgPsh2JGFyUMaZxHAaVHQnld4ll0oiv5cpaf2ISpSNzH5JqdOohnshiZsQRLAbgwwy/z6mUqn7/l3QHr++v6i6Mm1ifZlmeQx/HMG7bAPL7fQtld6rpJXlMcoZYs+u1AUvdTTpddJT48waRF0rpTs+ErgH0Z+/sVGM+/5pZ4ewH6dVaMHq2SXIA7xshJMj9X75Y5o2tWhvbULO6FST7+3Yaie/kwMOa60uegH/Z8s+rbdC7Xgpkn5Z3wZrseRzDHp6isLKXrvlt1LfSj8m7fjKEKUO6Zdgtq5j+gp2fw+ZDxOYR1qqL33EKvCcLbsXtiHnHG+ECP+pwP61sYsSmdOQmEv+snPthfBC/v0ZQzvor0aFx+YU1cKyldKI634PDvs0zl5e4ku24o/S28urAp1D/3sPv17YsTwLy00s/+R9DkL/yM7skX0il9JJfoeqETfA5Xoe6ASfQ9Uou+BSvQ98D+q1Kc9BxjPBwAAAABJRU5ErkJggg==" SearchSteps="Image" TargetType="ImageBased" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="3274bf0613cfa79039f18b7f6a9d05ec.png" xmlns="">0d0cU23L7eUeYWpuDimISig</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

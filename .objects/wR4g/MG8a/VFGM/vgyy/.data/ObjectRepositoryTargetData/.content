@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="eaY3nRPDCkK-fPCToZv7aA" Reference="2HNzGrMgqE2vTNIlI6sEcw/vgyyWzDHYk6aaMtjZ_S6lg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="uat-app.openinvoice.com/ticket" DesignTimeRectangle="508, 419, 43, 18" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Tickets' parentid='stack-*' tag='SPAN' /&gt;" Guid="609d403c-b013-49b1-8fe6-ff325b376890" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="5f7c9713873faf4a96c4516394a23458.png" xmlns="">0i-BP9rzDAUG6inpWUh6ufA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

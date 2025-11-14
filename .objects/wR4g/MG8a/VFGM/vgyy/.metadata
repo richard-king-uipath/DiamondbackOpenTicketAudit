@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Tickets",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "vgyyWzDHYk6aaMtjZ_S6lg",
+  "Reference": "2HNzGrMgqE2vTNIlI6sEcw/vgyyWzDHYk6aaMtjZ_S6lg",
+  "ParentRef": "2HNzGrMgqE2vTNIlI6sEcw/VFGMck2fg02qdq47t-BfHw",
+  "Created": "2025-09-10T14:15:52.4810331Z",
+  "Updated": "2025-09-10T14:15:52.4810331Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.14.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="65dHAMW4BE2eIhJyZ3rumQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="uat.openinvoice.com/docp/app/ticket/index.html" CVScreenId="25210cb5-5f9c-49e6-abf8-f9b4653ba0f2" CvElementArea="1052, 574, 67, 38" CvTextArea="1067, 586, 37, 12" CvTextArgument="Close" CvType="Button" DesignTimeRectangle="1055, 576, 61, 34" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='cancelBtn' tag='BUTTON' /&gt;" Guid="fafc7771-c17c-43ac-bdb3-998d31a2ecdc" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="520be3c4cbaedc802400b188350a6ed6.png" xmlns="">09vzRB45qVUChN3Vg-_egSQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

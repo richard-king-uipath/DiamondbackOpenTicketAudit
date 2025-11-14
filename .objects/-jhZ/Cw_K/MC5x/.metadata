@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Save As",
+  "Type": "Screen",
+  "Id": "MC5xV3LkWkS0cZLdFwjX7w",
+  "Reference": "2HNzGrMgqE2vTNIlI6sEcw/MC5xV3LkWkS0cZLdFwjX7w",
+  "ParentRef": "2HNzGrMgqE2vTNIlI6sEcw/Cw_KxyR7cUWH5zn17jPMvQ",
+  "Created": "2025-11-05T19:43:14.3383017Z",
+  "Updated": "2025-11-05T19:43:14.3383017Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.14.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

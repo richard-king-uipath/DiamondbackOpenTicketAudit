@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome 79548.pdf",
+  "Type": "Screen",
+  "Id": "Zpu3EERnKkeYnQPKXt2Zsw",
+  "Reference": "2HNzGrMgqE2vTNIlI6sEcw/Zpu3EERnKkeYnQPKXt2Zsw",
+  "ParentRef": "2HNzGrMgqE2vTNIlI6sEcw/3CuDBwm3cEeSS2YoRCGaug",
+  "Created": "2025-09-15T14:16:18.0189907Z",
+  "Updated": "2025-09-15T14:16:18.0189907Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.14.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

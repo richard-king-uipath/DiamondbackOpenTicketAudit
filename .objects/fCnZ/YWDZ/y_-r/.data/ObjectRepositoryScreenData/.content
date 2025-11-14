@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="qtAIl8P53UyUgJXvoBdVsA" Reference="2HNzGrMgqE2vTNIlI6sEcw/y_-rPGZsG02pC805nWItyQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="-20, -1088, 1936, 1048" BrowserType="Chrome" ContentHash="5IhJ5R1AEU-Doqj3tU-hYA" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADnSURBVDhPY2BgYPhPIcYQIBVjCJCKMQT+NzQ0/J88eTIGdnd3x1CL1YD79+//xwZqa2sx1OI1wNfX97+qqiocCwkJYajFa4C+vj6GHAbuPh//P6bT/j+XGNt/78WaYJxx0O1/7lHv/4Er9eFiIKziL4JpQOOBiP+h9db/OUVZ/7tOVwPjwsNB/8tPRvz3W6APFwNhJS9aeAGLAOkGGLgr/p9wPRmO1Q0U/0tLS/8/cODA/6dPn8Jxfn4+umaIAZp2Mv9rdobCsYA4N1hy4cKF/48ePQrHCQkJ6JohBlCIMQRIxRgCJGEAlx9yvKhOkYMAAAAASUVORK5CYII=" Reference="2HNzGrMgqE2vTNIlI6sEcw/y_-rPGZsG02pC805nWItyQ" Selector="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" Version="V2">
+      <imageRef attrName="InformativeScreenshot" originalValue="e4c1cf70fd8c426a46d461b93c85dc2a.jpg" xmlns="">0oeq0iQ4pm0qpsI5jaGDZTg</imageRef>
+    </TargetApp>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

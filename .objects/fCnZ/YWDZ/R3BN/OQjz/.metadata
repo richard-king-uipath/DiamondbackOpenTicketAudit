@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Add comment",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "OQjzm7hDIE2YH-R8xN0sFA",
+  "Reference": "2HNzGrMgqE2vTNIlI6sEcw/OQjzm7hDIE2YH-R8xN0sFA",
+  "ParentRef": "2HNzGrMgqE2vTNIlI6sEcw/R3BN54epI02jX31-udIZcg",
+  "Created": "2025-11-13T00:32:35.4155809Z",
+  "Updated": "2025-11-13T00:32:35.4155809Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.19.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
