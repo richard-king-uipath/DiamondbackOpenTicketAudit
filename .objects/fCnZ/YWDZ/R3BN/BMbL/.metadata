@@ -1,0 +1,14 @@
+﻿{
+  "Name": "DTM Trucking Inc.",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "BMbL-8cmhkqIOIRn6uzz6w",
+  "Reference": "2HNzGrMgqE2vTNIlI6sEcw/BMbL-8cmhkqIOIRn6uzz6w",
+  "ParentRef": "2HNzGrMgqE2vTNIlI6sEcw/R3BN54epI02jX31-udIZcg",
+  "Created": "2025-11-21T14:50:02.7085084Z",
+  "Updated": "2025-11-21T14:50:02.7085084Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.19.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

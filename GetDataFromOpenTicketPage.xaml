@@ -1,0 +1,952 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="GetDataFromOpenTicketPage" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:sd2="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_SupplierName" Type="OutArgument(x:String)" />
+    <x:Property Name="out_CurrentTicket" Type="OutArgument(x:String)" />
+    <x:Property Name="out_TicketCurrency" Type="OutArgument(x:String)" />
+    <x:Property Name="out_TicketDescription" Type="OutArgument(x:String)" />
+    <x:Property Name="out_EstimateNumber" Type="OutArgument(x:String)" />
+    <x:Property Name="out_summaryDetails" Type="OutArgument(x:String)" />
+    <x:Property Name="out_missingFieldSummary" Type="OutArgument(x:String)" />
+    <x:Property Name="out_ticketDetails" Type="OutArgument(x:String)" />
+  </x:Members>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>UiPath.Activities.System.Jobs</x:String>
+      <x:String>UiPath.UIAutomationNext.Exceptions</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>UiPath.Web.Activities.JSON.Models</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.MetadataLoadContext</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualStudio.Validation</AssemblyReference>
+      <AssemblyReference>System.Security.Cryptography</AssemblyReference>
+      <AssemblyReference>System.Security.Principal.Windows</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.Process</AssemblyReference>
+      <AssemblyReference>System.IO.MemoryMappedFiles</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Registry</AssemblyReference>
+      <AssemblyReference>System.IO.Pipes</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Net.WebClient</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Net.HttpListener</AssemblyReference>
+      <AssemblyReference>System.Net.WebProxy</AssemblyReference>
+      <AssemblyReference>System.Net.NameResolution</AssemblyReference>
+      <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
+      <AssemblyReference>System.Net.Requests</AssemblyReference>
+      <AssemblyReference>System.Net.ServicePoint</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>System.Threading.AccessControl</AssemblyReference>
+      <AssemblyReference>System.Threading</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>System.Threading.Tasks.Parallel</AssemblyReference>
+      <AssemblyReference>System.Text.Encoding.CodePages</AssemblyReference>
+      <AssemblyReference>System.Text.Encodings.Web</AssemblyReference>
+      <AssemblyReference>System.Security.Claims</AssemblyReference>
+      <AssemblyReference>System.Security.Cryptography.Pkcs</AssemblyReference>
+      <AssemblyReference>System.Security.Cryptography.ProtectedData</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.CompilerServices.VisualC</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms</AssemblyReference>
+      <AssemblyReference>System.Resources.Writer</AssemblyReference>
+      <AssemblyReference>Microsoft.PowerShell.Commands.Diagnostics</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.FileVersionInfo</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.DiagnosticSource</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.TraceSource</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.EventLog</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.PerformanceCounter</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.TextWriterTraceListener</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.StackTrace</AssemblyReference>
+      <AssemblyReference>System.Collections.Concurrent</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>System.Net.Security</AssemblyReference>
+      <AssemblyReference>System.Private.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xml.XPath.XDocument</AssemblyReference>
+      <AssemblyReference>Microsoft.CodeAnalysis.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.CodeAnalysis.Features</AssemblyReference>
+      <AssemblyReference>System.Net.NetworkInformation</AssemblyReference>
+      <AssemblyReference>System.Net.Ping</AssemblyReference>
+      <AssemblyReference>System.Net.Sockets</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.StudioWeb.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentProcessing.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.CodedWorkflows</AssemblyReference>
+      <AssemblyReference>ExtendedExtractionRe.CmelacFJlA1Ed2tkEdVRb4</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR</AssemblyReference>
+      <AssemblyReference>UiPath.Vision</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>a_Safety_Incident_Sa.cudAwUPMlE1zgpI21HfDuQ1</AssemblyReference>
+      <AssemblyReference>Agent_Input.ejWui3iaZFE1yjL2q11ucJd</AssemblyReference>
+      <AssemblyReference>Agent_Output.fWyXO9qR6G1v93EF2uXBnN3</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>System.Collections.Specialized</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>Agent_Output.P25KKzr1tK1VVlS94ugQva3</AssemblyReference>
+      <AssemblyReference>UiPath.Interop</AssemblyReference>
+      <AssemblyReference>UiPath.Driver.ComInterop</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Api</AssemblyReference>
+      <AssemblyReference>Agent_Input.BzUQu24zL6M1KgPWd3z5fZS</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence sap:VirtualizedContainerService.HintSize="1296.0000000000002,8094.4" sap2010:WorkflowViewState.IdRef="Sequence_151">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="alertStatus" />
+      <Variable x:TypeArguments="x:String" Name="priceBookName" />
+      <Variable x:TypeArguments="x:String" Name="driverName" />
+      <Variable x:TypeArguments="x:String" Name="truckNumber" />
+      <Variable x:TypeArguments="x:String" Name="serviceDate" />
+      <Variable x:TypeArguments="x:String" Name="ticketTotal" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="Get Data From Open Ticket Page" sap:VirtualizedContainerService.HintSize="608,8071.2" sap2010:WorkflowViewState.IdRef="Sequence_150">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="sd2:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome OpenInvoice" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="574.4,7400" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Never]" ScopeGuid="7dabc01f-6add-490b-bc8c-0bde32757864" Version="V2">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="540.8,7237.6" sap2010:WorkflowViewState.IdRef="Sequence_152">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NGetText DisplayName="Get Ticket Number" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="507.2,138.4" sap2010:WorkflowViewState.IdRef="NGetText_19" ScopeIdentifier="7dabc01f-6add-490b-bc8c-0bde32757864" TextString="[out_CurrentTicket]" Version="V5">
+                <uix:NGetText.Target>
+                  <uix:TargetAnchorable BrowserURL="uat.openinvoice.com/docp/app/ticket/index.html" ContentHash="SmXSDSKs10m4EdcksTxjwQ" DesignTimeRectangle="24, 235, 143, 27" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl name='receipt-number' tag='STRONG' /&gt;" Guid="3972e02d-fe37-4c6b-b6d0-6b12892c6dc8" InformativeScreenshot="c9989d9b4f46af8569e3b66f01d68f23.png" Reference="2HNzGrMgqE2vTNIlI6sEcw/za1bIXpZIk6PQzw1WjdRPw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                </uix:NGetText.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NGetText>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="507.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_18" Level="Trace" Message="[&quot;Processing &quot; &amp; out_CurrentTicket]">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:LogMessage>
+              <uix:NGetText DisplayName="Get Text 'DTM Trucking Inc.'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="507.2,138.4" sap2010:WorkflowViewState.IdRef="NGetText_30" ScopeIdentifier="7dabc01f-6add-490b-bc8c-0bde32757864" TextString="[out_SupplierName]" Version="V5">
+                <uix:NGetText.Target>
+                  <uix:TargetAnchorable BrowserURL="uat.openinvoice.com/docp/app/ticket/index.html" CVScreenId="774fbc82-b272-4bb4-8be4-68b7bea53f3d" ContentHash="nszmzt6ZEEqAgAWXCFxGKw" DesignTimeRectangle="1771, 223, 129, 21" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl name='supplier-name' tag='SPAN' /&gt;" Guid="1aaee379-3ce1-42f3-8ff1-1fbe2e5cdb8b" InformativeScreenshot="abf9e155074a46dfa677398bfb867c13.png" Reference="2HNzGrMgqE2vTNIlI6sEcw/BMbL-8cmhkqIOIRn6uzz6w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                </uix:NGetText.Target>
+              </uix:NGetText>
+              <TryCatch DisplayName="Try Catch Service Date" sap:VirtualizedContainerService.HintSize="507.2,716" sap2010:WorkflowViewState.IdRef="TryCatch_6">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <TryCatch.Try>
+                  <uix:NGetText DisplayName="Get Service Date" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="470.4,106.4" sap2010:WorkflowViewState.IdRef="NGetText_20" ScopeIdentifier="7dabc01f-6add-490b-bc8c-0bde32757864" TextString="[serviceDate]" Version="V5">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="uat.openinvoice.com/docp/app/ticket/index.html" ContentHash="ei1xunql50eQxKkhrRlw8w" DesignTimeRectangle="8, 118, 0, 0" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-labelledby='serviceDateLabel' parentid='ticketHeaderCollapse' tag='P' /&gt;" Guid="830ec80c-6d16-404f-b8a0-adbcd3708d49" InformativeScreenshot="3274bf0613cfa79039f18b7f6a9d05ec.png" Reference="2HNzGrMgqE2vTNIlI6sEcw/5AaJlDOwB0-MqqM-ap7d9w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="49, 287, 93, 19" Guid="a34eaf69-0213-4b6e-acc7-90e666bae3ed" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF0AAAATCAYAAADyIwHfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPRSURBVFhH7Ze9a+NIGMb3fxoIqBs4EKQQLMQceMCwZgubLVxFGE64MYHghXBNRCovGLGFCSxOcfggaCGga5wiqFhQYFFgwUVAEBC4EBieY2YkWx7JyZr9cKMfCDQz0juvHr3zaPQKFb+dV2pHxa+nEn0PbBE9hj8yUaMEhBDQxgDuY8n4H5oYJ7SG9pmLaJm/BsDChdkaI+LnywjuaRNU4zE1GMcO/Fi5PiX+bIESAjaaq0MILhgGtwCefIx7WTwCemTCuVMCProYvKHQeI6aAXPkY+OKl2LcWPL5lKMsr10oFX3+kUFr2PCfZJuLoB+YmKb5RJ/aILoFNx3HIsCwQaCf+asYnORfE+1PXPIE3okOvTvBPBEjCD8wkNc2AvVFxS4snYHVyx4ugF0fwEeEyTsD5lWIJL0/+ToEOzBg36eXLjz0dR3m1RxyylDkaJwH6QXfEYOLXnegZvGjFEVfzjCgBuwvm91ej8C4kAl7J/nkJfFVB6Q1kVUtiDBumXAXvOLGaBITU36+Yg6nTmBeC0lSYng9HWwUwu2ViH47AEtzKJLA7RKwj/Ke6LIJcjyVgmd8c8AO0pxK2Yzx+0R/GKJGLHhKN69a0kgTeHDQpDX0r0PEiwTRrYPOoY7+TW5pPo7R7rryoT+XJx+cGyAn65niGwt6w0G4lC9ZFX12ytZVqCKKhWJwJ5vuX8X7xUoxCPr/Kd0ZSgwh+p99DDNb1CiavQnCjTe5O0XR+URHQ4Rl/Tnhkq8TdHQCjVIQwvD33brGOSvv5TU9YiDZC8gh+nup6NwODhmcB9ksiJ7/PhSQK2RVFKWraN1v3SjdAjUGgPsh2JGFyUMaZxHAaVHQnld4ll0oiv5cpaf2ISpSNzH5JqdOohnshiZsQRLAbgwwy/z6mUqn7/l3QHr++v6i6Mm1ifZlmeQx/HMG7bAPL7fQtld6rpJXlMcoZYs+u1AUvdTTpddJT48waRF0rpTs+ErgH0Z+/sVGM+/5pZ4ewH6dVaMHq2SXIA7xshJMj9X75Y5o2tWhvbULO6FST7+3Yaie/kwMOa60uegH/Z8s+rbdC7Xgpkn5Z3wZrseRzDHp6isLKXrvlt1LfSj8m7fjKEKUO6Zdgtq5j+gp2fw+ZDxOYR1qqL33EKvCcLbsXtiHnHG+ECP+pwP61sYsSmdOQmEv+snPthfBC/v0ZQzvor0aFx+YU1cKyldKI634PDvs0zl5e4ku24o/S28urAp1D/3sPv17YsTwLy00s/+R9DkL/yM7skX0il9JJfoeqETfA5Xoe6ASfQ9Uou+BSvQ98D+q1Kc9BxjPBwAAAABJRU5ErkJggg==" SearchSteps="Image" TargetType="ImageBased" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NGetText.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NGetText>
+                </TryCatch.Try>
+                <TryCatch.Catches>
+                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="473.6,236" sap2010:WorkflowViewState.IdRef="Catch`1_14">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ActivityAction x:TypeArguments="s:Exception">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="467.2,164.8" sap2010:WorkflowViewState.IdRef="Sequence_72">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_28">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[Out_missingFieldSummary]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[Out_missingFieldSummary &amp; "Service Date, "]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </ActivityAction>
+                  </Catch>
+                </TryCatch.Catches>
+                <TryCatch.Finally>
+                  <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="470.4,89.6" sap2010:WorkflowViewState.IdRef="Sequence_80">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </TryCatch.Finally>
+              </TryCatch>
+              <TryCatch DisplayName="Try Catch Currency" sap:VirtualizedContainerService.HintSize="507.2,716" sap2010:WorkflowViewState.IdRef="TryCatch_7">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <TryCatch.Try>
+                  <uix:NGetText DisplayName="Get Currency" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="470.4,106.4" sap2010:WorkflowViewState.IdRef="NGetText_21" ScopeIdentifier="7dabc01f-6add-490b-bc8c-0bde32757864" TextString="[out_TicketCurrency]" Version="V5">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="uat.openinvoice.com/docp/app/ticket/index.html" ContentHash="TaUakafr40yaVAgdajPVzw" DesignTimeRectangle="8, 118, 0, 0" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-labelledby='currencyLabel' parentid='ticketHeaderCollapse' tag='P' /&gt;" Guid="4c532b13-1ef5-42f7-a569-7e2d9f70fa36" InformativeScreenshot="a19918001806ba9067caccf481071a2b.png" Reference="2HNzGrMgqE2vTNIlI6sEcw/yL3L8WOXgkafGCMEjJk4YQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="50, 371, 41, 26" Guid="e5b37d30-7cc5-4b01-8ed8-fb610de6fa04" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACkAAAAaCAYAAAAqjnX1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGDSURBVFhH7ZQxa8JAGIb9TweBbIFCwCFQqASaqU7N5ObSo0soiENxaegsN4mLu6Qg6JIOUqGgSwuCg3BTwCEgvCUJxhhMK+FaLNwDGe77Li8PuS9XwT+gki+cI1JSFFJSFFJSFDnJFdg1AR0dVuNO1wK5H6frYMbQvNJACAEhKrQbit402O2Oc5Je8qgXNdiPHlZhGnEy5STXA9iKhU4qFYK/MjTMNvxY4kjO5gPeQw1q1cF499qJlJMcURDDxTy/KaUoJ4B3p0Fr+fnGt5ST3Izh6ASqScGGc6yC/BkW5+DdhaE42A/Oz5STjIiO77mJejWZS/XShjs5nMljOVgyWIT+kWSWDYffbUAnBtxFVCjOEfAlOQa3BPU+PywD8FsajKfMFG6z3YisWJGkkJkEwokDXW+gt9jNWQg+pNAVC2yZVHjfhma24X3uZzGYdmApNgbraHVEUtzfncBfOrDzd+Ask7wN8Nan6TzGe8wmWLrnV+/J80RKikJKikJKikJKiuILsrvoxU388n0AAAAASUVORK5CYII=" SearchSteps="Image" TargetType="ImageBased" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NGetText.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NGetText>
+                </TryCatch.Try>
+                <TryCatch.Catches>
+                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="473.6,236" sap2010:WorkflowViewState.IdRef="Catch`1_15">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ActivityAction x:TypeArguments="s:Exception">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="467.2,164.8" sap2010:WorkflowViewState.IdRef="Sequence_73">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_29">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[Out_missingFieldSummary]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[Out_missingFieldSummary &amp; "Currency, "]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </ActivityAction>
+                  </Catch>
+                </TryCatch.Catches>
+                <TryCatch.Finally>
+                  <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="470.4,89.6" sap2010:WorkflowViewState.IdRef="Sequence_81">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </TryCatch.Finally>
+              </TryCatch>
+              <TryCatch DisplayName="Try Catch Price Book Name" sap:VirtualizedContainerService.HintSize="507.2,716" sap2010:WorkflowViewState.IdRef="TryCatch_8">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <TryCatch.Try>
+                  <uix:NGetText DisplayName="Get Price Book Name" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="470.4,106.4" sap2010:WorkflowViewState.IdRef="NGetText_22" ScopeIdentifier="7dabc01f-6add-490b-bc8c-0bde32757864" TextString="[priceBookName]" Version="V5">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="uat.openinvoice.com/docp/app/ticket/index.html" ContentHash="vSfTUFsmBkWCStB3be2drw" DesignTimeRectangle="8, 118, 0, 0" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-labelledby='contractLabel' parentid='ticketHeaderCollapse' tag='P' /&gt;" Guid="ff066d77-2033-42ed-a309-3151b1715700" InformativeScreenshot="e4360d73b728bc0901aa321759114f76.png" Reference="2HNzGrMgqE2vTNIlI6sEcw/7iGr2h2Gl0SKYatpWeyOjw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="552, 510, 104, 15" ElementType="Text" FuzzySelectorArgument="&lt;webctrl type='' parentid='contractLabel' tag='SPAN' class='' aaname='Price Book Name' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='PRICE BOOK NAME' /&gt;" Guid="14cd0150-9870-42c4-87b1-855d716cf0c0" SearchSteps="FuzzySelector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NGetText.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NGetText>
+                </TryCatch.Try>
+                <TryCatch.Catches>
+                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="473.6,236" sap2010:WorkflowViewState.IdRef="Catch`1_16">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ActivityAction x:TypeArguments="s:Exception">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="467.2,164.8" sap2010:WorkflowViewState.IdRef="Sequence_74">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_30">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[Out_missingFieldSummary]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[Out_missingFieldSummary &amp; "Price Book Name, "]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </ActivityAction>
+                  </Catch>
+                </TryCatch.Catches>
+                <TryCatch.Finally>
+                  <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="470.4,89.6" sap2010:WorkflowViewState.IdRef="Sequence_82">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </TryCatch.Finally>
+              </TryCatch>
+              <TryCatch DisplayName="Try Catch Description" sap:VirtualizedContainerService.HintSize="507.2,716" sap2010:WorkflowViewState.IdRef="TryCatch_9">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <TryCatch.Try>
+                  <uix:NGetText DisplayName="Get Description" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="470.4,106.4" sap2010:WorkflowViewState.IdRef="NGetText_23" ScopeIdentifier="7dabc01f-6add-490b-bc8c-0bde32757864" TextString="[out_ticketDescription]" Version="V5">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="uat.openinvoice.com/docp/app/ticket/index.html" ContentHash="q2CdgdjhP0CKb3u6S0aUCg" DesignTimeRectangle="8, 118, 0, 0" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-labelledby='receiptDescriptionLabel' parentid='ticketHeaderCollapse' tag='P' /&gt;" Guid="637dfd9a-c80b-46e2-9723-2ffa71b786a0" InformativeScreenshot="6cc875025d6345e2b1374957072cacfe.png" Reference="2HNzGrMgqE2vTNIlI6sEcw/dw7MQkG18E-cxSSygiTUVw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="46, 480, 349, 26" Guid="e7011fb8-0986-41d5-b1dd-563a8ac2bac2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAV0AAAAaCAYAAAAUoo/XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAn+SURBVHhe7ZvRhxzLF8fv/9QM/dYsTR6GkPFjm+WOPGSFLD+2XdL24a6w5hLjkpGHnw2r5WGEmH342cvqJcxyTR7WhLBLTAjzsDShyUOzfH9OVXVPdXVVz+RnM+veWx+GnamenlN1Tn3r1Onan2CxWCyWtfGT+oHFYrFYfhxWdC0Wi2WNWNG1WCyWNWJF12KxWNaIFV2LxWJZIyuLbn4awnEctF9eqk2YHwWsTX55Wz0k1/JVGaZvInTveeIaF97PEYYXmXwRv9feuPJZQVMb4zpB/3EHnivs8DrYfp5gnqsXLsi/JOj97MGVbBp9kr5wTe0+vJZk84eqzVVyzF7ReETQWzpG5ASIv6ifA+M9B8HRnL95F8FpBYg/q1fNEW86iN6Jt3TdZgz6Fn1f9UPxKq+vsMxWAF8TRL5kl0R2FsFzlLavUwz3uqUPvAchYsXHJsz+1YzZTYrk+TY6Gy7vY8tD53EfyRfZ2cpYyS2V36L7K2PmthEeTVFYXrctw3jPh783Lq8p+ThAW+s7CfKb8pvu/RBxEVv5GPsbS+7B0IzNbfMlRiBirE6G6VGIjleMm4fu3hDTr7x19jqA9+sYDVPwH8eKopti+NBBeHSIrtfD5KbaWg9IMZnvD8Almgeo+3CASVoMf470fYwd30f0bhG29XstaGrD5xiB6yM6niEv7Ps2Q/KsA3crxkyxmZFP0NvakUQhx/w4hN8KkXyjiT1FjwTn1UwETY70NILf2sEordxJwPvt+j48o5CZJ0lNdCmIaQwrtptF13iNlhVsZYLrw9eJbkZtAYJNuS3F6HEboeSD/NMhglYbgyv5y3rM/lXG7GaGeMuF/3SEGfmJfZZjdrqPjisLlXkc6qKr+EQsNuEp97zWtmzMxkeO3yJmwj9qUlxF4zdaxMrYWxmN7bdNg+imb7fhbPZLkUWeYnK0g87BxAqtgdVE92qANhNbIb4iEAu0AUmOcroYXoss2e9hqhM+lhUsAk17L4G57RKD+w623+qUMMPJrj5D1yMF8Zz6EOKkMgmm6PseehfyZ4L5ENsPY8xoATAJWcMkqYnuZh9xLZu6JdFdamuOyUGHCUrFLgZfRIOjGZJam0qO5BcHwWt+zeV/OvCenEDnKbN/q2N2+bIN59FIe4/sj1Ba7M3jsFR0hT/cgwn722jbRQ++FyFhDsoxfubDe5pwf10dorOxg5PKjk+g9RvZ4aL3Z/G3ZFM+w3C3w3dclNXvDjFj05Bfd3g6RPiA7yIpYx6VfckxO47QLXYEXoDe2WLkmG9/HyHebcMV/cs+xAjv8+vZjvXPQ6Po0vfbL8xzqzJuTBMiDM96CCgzbvnYeTtDet7n7x0XnRdTIda8X/3jwhYXnecTpJ+GpW3+v0cVm9KzXtlPd6Nb6Sez4+kI4+diF9bysP3qUvxWhknxOdvNqrv022Ul0Z0cePB+m7K/mYA+HFYCvhaQNxmmLxaZbrNjZjj8F2UGDRmFwNjGnKmKo8RZBKddTMQGKFuiTLfMjDM2ifwnMSbXOfKMZ84eiZVuASkQwaWxtD6Z5Jaa6MaYfxtj35cXlFsS3YJGWzmq6GbvonKM1LYaNxP0PMMipWD0b2XMeN+KeKlxkyBy2hh8pDfmcVgmuvmXEcJlma7g8kUbzu4J0vN9+H6E8ZIkl1Hzm7LLUvu85SJ4MUXG4i7H7KgnMnq6zkHntzH4JjJD8nQxX6kMMzm/RCaGi+083EWSw0pSD3oYFzvQbwnClo/orChzzDF66mtiTDRTn0kQ92IkH+fl7xTURddHeDxnYpd/6KPdctEl8aN+fT5ksZiwPvJ+lX3+OkLYcuA/S3g/aafldXAodjXMDp8WG7EnZf7zsX8u+c/fwfBKGMh+a5vvWM/34WweikUMyK+GiOXdyy2zXHSZE6TtIZtE1e0i61ClPiWvFjzwmyamPHGbgtvYxrbiDcKxVFi4g9nq+SjGVBbvmxTT5wFbGWklpNW1cI6Rxt+rT/CyRSe69DcrnRTb5jsWXVoE7i228M2iyzNiZ0u1T089juRXMWbcV+a+yX03j0NddKu/593r8lKV9noFUe6gzK2Y5EtRa7otD37leYIUJ7QbNCYNmniie5e28pprm7I4r4PwbYLDzcX1qv9y2insnlRLAw3lBSL/nGCw24UvstX24wHGotxQF1051sh29b3sZ7lf5Ev1feHbnO1m1YVY7kvdf5TsifvRTp4E+1O2lpLIUtFN33RrmS3LfMW2i6h3qMpfJtNldeYBgnv7GLOaLp9M5WpbZMJFNsN+VxUFXXDJqMEktZhEl/r+mlZqsusuRZdvn6msUG9T4bsdl8ZyxaTB6F816/uhma4oRynxarZNQDFW80MDst+yE57YMJsLJJu0Pi7QxJMsuu978PwICRNBHt9dWsANoqvt5xLRlcmvJ4if+OUudz2ia/CzNG71flXvl12N+MKxQQ9kF4vGj2CJ6PJaaT3roJV5tTos8deq6UoOvKCA7UNs1Crtal27Qi24ZKZ8u/1e/VzUywsxqU204ml5jP6diW49Iyxfsg03KU5+4Q9OpysKLmH2b3UCrl7TTTF65KD7pn4lJQ4LYVUmOI1JKyi3roTZNoHWDw3oFlXa4pZz5HYy3brdVbFRRZc9GPueTFc3p6WYWo/o/j+Zrnq/BdlpBM8QX7dBs+jSKtkKMZqnSFP5NUH//iKY6x1SMZ1eoFX3x55eoHqU8fTC9Qg7DyKMPi+clV30EbS2MaLSSDrCTmtRg+Ltg+VP42vBVYUmmCvX0W5yXNJpD5bJiot0k1g8GSeRuxvRzZFV4oDE1WEPP9Kvoi/XJ4juuazGyOuPq2P2rzIBTacXjiP4ldMLRa1PquWVJ1DkCadOcFGnlSae2TaB1g8NqNffqImDbBMtHk01XbPoVjNdqlfSaRKz6H5fTTfF8JGHzkEi+SHD9PegHLv1iK54oLmspmsS3Y8x+m8uy3i9Q9HlT53lMoIMWxF1WwgjGWbHvcU5XVHD0p7TVbMoedU0tDGuJxjQE15xRtTdWH5ON7sYIirP6YpzpdI53PzTqN6+7NxpLbhUxJll9Yyp/MRUnZQFtLi07kp061Tb+O/WfbS4hrJU7+Gw3q/GOFInoHhA9DJcnNN1ded0OelZH9viyb7+rLXu/tWjX0tjT+cHylC9LoaabEp7PQlHK8QJ+0nFpiWnF4yiy57MB/x7dPb4TXNNl33jO04vFOeyeT1X+GE3Lnc4axNdsvu833x6wSS62RRxMbba/zG4XRpE12L5AdCD2C3TVvnvx+QgaN4VWf5xWNG1rJX5fwcYLf0vq78J8xMM3i4eOloshBVdi8ViWSNWdC0Wi2WNWNG1WCyWNWJF12KxWNaIFV2LxWJZI1Z0LRaLZY1Y0bVYLJY1YkXXYrFY1ogVXYvFYlkj/wN01WBhX635pwAAAABJRU5ErkJggg==" SearchSteps="Image" TargetType="ImageBased" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NGetText.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NGetText>
+                </TryCatch.Try>
+                <TryCatch.Catches>
+                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="473.6,236" sap2010:WorkflowViewState.IdRef="Catch`1_17">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ActivityAction x:TypeArguments="s:Exception">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="467.2,164.8" sap2010:WorkflowViewState.IdRef="Sequence_75">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_31">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[Out_missingFieldSummary]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[Out_missingFieldSummary &amp; "Description, "]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </ActivityAction>
+                  </Catch>
+                </TryCatch.Catches>
+                <TryCatch.Finally>
+                  <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="470.4,89.6" sap2010:WorkflowViewState.IdRef="Sequence_83">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </TryCatch.Finally>
+              </TryCatch>
+              <TryCatch DisplayName="Try Catch Truck Number" sap:VirtualizedContainerService.HintSize="507.2,717.6" sap2010:WorkflowViewState.IdRef="TryCatch_10">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <TryCatch.Try>
+                  <uix:NGetText DisplayName="Get Truck Number" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="470.4,106.4" sap2010:WorkflowViewState.IdRef="NGetText_24" ScopeIdentifier="7dabc01f-6add-490b-bc8c-0bde32757864" TextString="[truckNumber]" Version="V5">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="uat.openinvoice.com/docp/app/ticket/index.html" ContentHash="aRY_VJshlkejhQXKeH_g9w" DesignTimeRectangle="8, 118, 0, 0" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-labelledby='truckNumberLabel' parentid='ticketHeaderCollapse' tag='P' /&gt;" Guid="a8ab9cb7-03ef-45a4-ab61-2b49cc456a0b" InformativeScreenshot="6320dd65625796e1d34c6fc883e91424.png" Reference="2HNzGrMgqE2vTNIlI6sEcw/Y0nHmE8RLE69rX62bCJrFg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="49, 349, 56, 25" Guid="21eae075-f770-4ed8-8e41-bfb7c2c223ad" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADgAAAAZCAYAAABkdu2NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKxSURBVFhH7ZWxa+MwFMb7PwkM3gQHhg6Gg5rACQKXrRTupnip6JIl+JYsZ25yoZgOpYszZQgOFJwlHUo6tVAcCGQoGAqBDobCdyiRHcV223RMyG+z9fT0Pr339A6w4xwUf+wae4Hbzl7gtlMpMJ2GcH5S6ISAaBRW08d4XrB5CsDrFETasLMAcaoYPCs+dBP2xRjrLlLEXQ5GydIHZeDdGLmLlzH8pgWqLdfp0THcYSGIDSgLfA1hawbs7kwelmLWtWHUfcwym6kPpjO4t8nS5k0Ee4XwJfMRoWUoPtIYXp3A/PuQecDskkGvuxglUtJrjOA6xPxNfCS4OrHQ6mcxAPM7F0wz4T7mLjaiLPCGg9Q8xGs/U/SaFM7d8mvUpjD/rYItklw3QJq9VTYE4lI0G+GruJARHPrVYGfwfxDwm+L/jykLTAL81gzwvpKdYQcNnYBdiBzG8GoUznCGsM2WJaRTNNohksXtA+FpZqvyANckaA0BTDxY1EEkWkGWuf6tAWeQFPZkpEhuXbBDjuiLVVoWKMrh3oddk/0jeyM8y4KOwAmFUeMIJjJHL2O4dQLjzzi/abu/lr/1DIgqoQas0wCxyGhegkZeJeqexQUctRA+q2ubUSmwjChRNYMEfFAwGXAQ04Uo3PczKMtcZJBwhDLjGWKf2qcq6SSAfcjgT4srH7OZwHkPttLgUZ5NBSFQ9m5lDz66MPMejMC1crBCoHW+3v0qled+QoXAFFH7GE72JKcxrn4Zi4Dz8p94YBqD96SWqA52KQ9/5xVlSvDxOQOpe/loWZSoLkWnI3Rqx6tXejG6Ati0WMKfUyFQzrBsxhUekIxFn37X5QyzynPu0zk4x/jChqlnc86Gf7+yELO4c7Kagx8/Qu9TLXCH2AvcdvYCt529wG1nL3Db2XmB/wESKrLHNePMFQAAAABJRU5ErkJggg==" SearchSteps="Image" TargetType="ImageBased" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NGetText.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NGetText>
+                </TryCatch.Try>
+                <TryCatch.Catches>
+                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="473.6,237.6" sap2010:WorkflowViewState.IdRef="Catch`1_18">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ActivityAction x:TypeArguments="s:Exception">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="467.2,166.4" sap2010:WorkflowViewState.IdRef="Sequence_76">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="433.6,106.4" sap2010:WorkflowViewState.IdRef="Assign_32">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[Out_missingFieldSummary]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String" xml:space="preserve">[Out_missingFieldSummary &amp; "Truck Number, 
+"]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </ActivityAction>
+                  </Catch>
+                </TryCatch.Catches>
+                <TryCatch.Finally>
+                  <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="470.4,89.6" sap2010:WorkflowViewState.IdRef="Sequence_84">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </TryCatch.Finally>
+              </TryCatch>
+              <TryCatch DisplayName="Try Catch Driver" sap:VirtualizedContainerService.HintSize="507.2,716" sap2010:WorkflowViewState.IdRef="TryCatch_11">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <TryCatch.Try>
+                  <uix:NGetText DisplayName="Get Driver" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="470.4,106.4" sap2010:WorkflowViewState.IdRef="NGetText_25" ScopeIdentifier="7dabc01f-6add-490b-bc8c-0bde32757864" TextString="[driverName]" Version="V5">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="uat.openinvoice.com/docp/app/ticket/index.html" ContentHash="4LBiACIfGkuU4QYt-pi6GQ" DesignTimeRectangle="8, 118, 0, 0" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-labelledby='driverLabel' parentid='ticketHeaderCollapse' tag='P' /&gt;" Guid="e143797d-0bb1-457e-998e-5e9316437a44" InformativeScreenshot="4b1905d6f12b2991d090fc7145b2285a.png" Reference="2HNzGrMgqE2vTNIlI6sEcw/eLBDv85AOUqwpppwMj36iA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="45, 416, 122, 27" Guid="d9c5edc6-e820-480b-869d-83660ba98527" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHoAAAAbCAYAAACz8ZsbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQRSURBVGhD7ZffZ+RsFMf3f3oYcheW8F6EpWOZUN7oxY6X7VVj2Zibeqm81Fgae5VS8V6MYaQXq0ullJmb7MWaZUlZKWUulrCEvQjDdz3Pk2QySTuT7g+70+RLafIkZ845n3PO8+QRGtVCj4o3Gj1MNaBrogZ0TdSAroka0DVRA7omakDXRBVAz2B3CIhowJsX1wDvQAQhCuyb4sqGaB5hOtShPhZACAFpiWj/04f7ufjgZqs6aEKgncfLS19daC26tqGg5wHsHQHScxtemMQ2jxGc6pAEFYNZ8YXNVWXQ2gsNZGeAMLcSDlWIPR3aEugI0xMNbZEXh7ilwf4QZe+MewTKKwf2ngyhN+Y34wBOT4FIi6YlQjlwEabT48aGQnQ4k37WdeIzC/7XzCTCCyNbEx6rMC7yXt6t2YkC0rEQ3DKp4jgtag4+63hRydkfQycK+qc2tCcC9MuFv4MLAwrNQUvC7ihAOOnzayKgfTRFaj2amOhu0alIQAQZ2skUabaYfy8djA9ViALPTffYz969jyqD1i98mE9kmFfJ7bkHQ6TXPNgU9Ox/BcK2iekXfh29N6EIi3UKmmwZGKcdhBDOMwEKDYAmfB7DP1Yg/TvmAbHESdgdpusBrA5Bd8STHU/2IUkanBtuL75xoEkS9ifr0jGDvU2gvV3z3DyEN/ERJY/FnywoggaXFRqNnaD93xhZOIm/2umM+R9/6ENuCVDT+K4tVgguK64I04mHMC3aLy50aZFjBlraxeAqMc7e7cKpVsdLqg76MungA4/djc/TDs+D9mHKMsyPyxb8Ixnykc/+Zx19kpuJH03Isgm+moraSQJKOiTpfabguJ3YiHG2V4YVv9VA9s7WVD6HxLpwpfiEkmlHiW1oIxdWJ413uciZSv7SZ4rXi3foNGKdLohQDz04vYVPDHQ69ZgCWE+/b5u8F2i2J7NqDjHYSffsvOO3BF5wuAT6Uudjq/SX2CkljtvjNnK+5UVtdmys3mIrdvQ7A6Kkw2UTKkb4zoSaTahb4i35uwL05wHUlgLrUzKNrs+g/7UKNI23nN8quh/o5JQtP9+FnJ3Cf0VH51RKXB70j3R0tT16dbJ/EPQtBUnz80eAxpUJmRDIr1M0hVE06q7do5dAs84SoBxNESUJj69d2G8CflFKXB40gPfGd+7RK07d5/toU5+vix0NxFcWlNZPAl3s6JDu0X8KaNCxrWKQfWcWg40RDNecupdA01dyp24iQPzbgJuAKyeuAJqdXBcn8uKp238tQ9wZ3D3G7/qOTn8fEbzDxDd6Kh7+3D06GCX7P/3aOBzDefnbQG+46NfB9oqtoSZ68KBnb0w4dATXXA8edCOuBnRN1ICuiRrQNVEDuiZqQNdEDeiaqAFdE30DX80PH8ZtLRUAAAAASUVORK5CYII=" SearchSteps="Image" TargetType="ImageBased" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NGetText.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NGetText>
+                </TryCatch.Try>
+                <TryCatch.Catches>
+                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="473.6,236" sap2010:WorkflowViewState.IdRef="Catch`1_19">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ActivityAction x:TypeArguments="s:Exception">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="467.2,164.8" sap2010:WorkflowViewState.IdRef="Sequence_77">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_33">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[Out_missingFieldSummary]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[Out_missingFieldSummary &amp; "Driver, "]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </ActivityAction>
+                  </Catch>
+                </TryCatch.Catches>
+                <TryCatch.Finally>
+                  <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="470.4,89.6" sap2010:WorkflowViewState.IdRef="Sequence_85">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </TryCatch.Finally>
+              </TryCatch>
+              <TryCatch DisplayName="Try Catch Total" sap:VirtualizedContainerService.HintSize="507.2,716" sap2010:WorkflowViewState.IdRef="TryCatch_12">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <TryCatch.Try>
+                  <uix:NGetText DisplayName="Get Total" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="470.4,106.4" sap2010:WorkflowViewState.IdRef="NGetText_26" ScopeIdentifier="7dabc01f-6add-490b-bc8c-0bde32757864" TextString="[ticketTotal]" Version="V5">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="uat.openinvoice.com/docp/app/ticket/index.html" ContentHash="P0Mb1cEWoEC1dFhxpBhU0w" DesignTimeRectangle="8, 118, 0, 0" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='headerCostAllocation' parentid='ticketHeaderCollapse' tag='TABLE' /&gt;&lt;webctrl parentid='amount0' tableRow='2' tag='SPAN' /&gt;" Guid="46e558d7-543e-4dab-b6ee-ed430a3968d5" InformativeScreenshot="4ee5b1ab4bb3f0ba4fa8bbc941076f8e.png" Reference="2HNzGrMgqE2vTNIlI6sEcw/RIQjqgtSpUiAD0N7xJD_TQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="760, 501, 74, 27" Guid="d7d25a69-ab0e-44fb-be71-d38ebdf6ea32" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEoAAAAbCAYAAADbAhkjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMkSURBVGhD7ZbPS+NAFMf9nwYCOQ0IAQ8B2SI44CEs2JOnDULoRYTSPfRi8NQFiQcRlngqlBSE9lJBKghdKBEhh0KgUDwECj1/l8mPNU3GGOouLJjDB5o3783T75v3ZrZWqxUq3mcra6gQUwlVkkqoklRClaQSqiTFQj1bYI1B3v4JqYQqiViomYPWAQUhJILWoF+MsVi++gRTG0biI1Gwhg034GsDGElchpMhXw/g9dqof4ljZQqt6cALY8UsHizoiT9laPX9dZ+lD6epgco8jwz1m4XxIr/PRxAINUZbodB/egjCE+UgmI1gHtZhPcc+3C4zmHc+Av69DODeXMGZZ/eKuWuB0hZGyxWCuzZqX02M/CBaWy7gNBSQYyfaK0uS634Rfc8dGAqB3o2/VwEGpwqUYzsWO4D7g4HsmpikCvtR8kJ5FhjRYHlvt96oSaGeT3J2MT7sQwLtOnMK0kw7qEknGGTtSa6zTK5bIxKC/55dQSM6ui/pOA/WPoHei4vxF8gLxZMcEJCdOtpnBlTDyay76OxRtIYenCYDlV7bxxdV8JcJVdLhrP0j6/jXGsihDT+3xnMRGLcZ+0sXOmFRMfsGyL4FLxM7OVNBTvNF3hSBUFE7TG5Sc4TPhZ4XtwafQRTKngH7Ka7YfAzzgED5Ps7sFcA5JsWn78kCkxScDEXV57lq6ExFdhaOAu+CCds2tAu6YVPEQiXw1jO6cIdtMCk5ynGV+xlfXlk1bod0vFSHPRPszZl1oSsytEs3vxZSdKLqsP3iE0VzhdscsVBJC6Vm1KgpQ26Owt+DBgG78NZj+B+814GbsvH5QuOYLIsHE0xWYHQLZtcbMyro6e/MqAnM3X89ox5NqDtHsPiNlgiV3DRJ4qcOmMTQmaZbTwa7TIk3s1GXVJi/skkXGJ9rkJUjXCXxRQhvPQqj/86tt9+BK5qZG5IXKnzntKBty/l3VMovfNvsxj6C9XCYCmZHeGMJ3liEGNGtN3egbyto32dy/X/vqBRvPA8+I8VCvbgYPRbPkM9CsVAVf6iEKkklVEkqoUpSCVWSSqiSVEKVpBKqJL8B/tnxKPgVq9UAAAAASUVORK5CYII=" SearchSteps="Image" TargetType="ImageBased" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NGetText.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NGetText>
+                </TryCatch.Try>
+                <TryCatch.Catches>
+                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="473.6,236" sap2010:WorkflowViewState.IdRef="Catch`1_20">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ActivityAction x:TypeArguments="s:Exception">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="467.2,164.8" sap2010:WorkflowViewState.IdRef="Sequence_78">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_34">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[Out_missingFieldSummary]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[Out_missingFieldSummary &amp; "Total, "]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </ActivityAction>
+                  </Catch>
+                </TryCatch.Catches>
+                <TryCatch.Finally>
+                  <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="470.4,89.6" sap2010:WorkflowViewState.IdRef="Sequence_86">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </TryCatch.Finally>
+              </TryCatch>
+              <TryCatch DisplayName="Try Catch Status" sap:VirtualizedContainerService.HintSize="507.2,716" sap2010:WorkflowViewState.IdRef="TryCatch_13">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <TryCatch.Try>
+                  <uix:NGetText DisplayName="Get Status" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="470.4,106.4" sap2010:WorkflowViewState.IdRef="NGetText_27" ScopeIdentifier="7dabc01f-6add-490b-bc8c-0bde32757864" TextString="[alertStatus]" Version="V5">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="uat.openinvoice.com/docp/app/ticket/index.html" CVScreenId="485919b3-c3d2-429e-b441-c7c682f8a62f" ContentHash="qQkqO-gtPUqMLWtSa8NDUQ" CvType="AnyWordGroup" DesignTimeRectangle="50, 323, 238, 14" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl name='compliance-summary-*' tag='SPAN' /&gt;" Guid="17ab3bfd-fef2-437f-94d0-efd74fe11c3b" InformativeScreenshot="67637efa97f71bd21d7892067bbf5133.png" Reference="2HNzGrMgqE2vTNIlI6sEcw/REeqqkJgTk2gvy8IVD5FaA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="485919b3-c3d2-429e-b441-c7c682f8a62f" DesignTimeRectangle="21, 322, 21, 16" FullSelectorArgument="&lt;webctrl idx='3' parentid='receiptDetail' tag='I' /&gt;" Guid="7932f090-27c5-4303-8705-081349a29678" SearchSteps="Selector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NGetText.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NGetText>
+                </TryCatch.Try>
+                <TryCatch.Catches>
+                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="473.6,236" sap2010:WorkflowViewState.IdRef="Catch`1_21">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ActivityAction x:TypeArguments="s:Exception">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="467.2,164.8" sap2010:WorkflowViewState.IdRef="Sequence_79">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_35">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[Out_missingFieldSummary]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[Out_missingFieldSummary &amp; "Status, "]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </ActivityAction>
+                  </Catch>
+                </TryCatch.Catches>
+                <TryCatch.Finally>
+                  <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="470.4,89.6" sap2010:WorkflowViewState.IdRef="Sequence_87">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </TryCatch.Finally>
+              </TryCatch>
+              <TryCatch sap2010:Annotation.AnnotationText="For estimate number we have special rules that dffer from other fields.&#xA;4. Estimate Number:&#xA;   - It will not be compared to the ticket data. &#xA;   - The Estimate Number field must contain exactly 6 digits.&#xA;Making this more reliable by turning Null into 000000" DisplayName="Try Catch Estimate Number" sap:VirtualizedContainerService.HintSize="507.2,816" sap2010:WorkflowViewState.IdRef="TryCatch_14">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <TryCatch.Try>
+                  <Sequence sap:VirtualizedContainerService.HintSize="419.2,189.6" sap2010:WorkflowViewState.IdRef="Sequence_155">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NGetText DisplayName="Get Text 'estimate number'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382.4,129.6" sap2010:WorkflowViewState.IdRef="NGetText_29" ScopeIdentifier="7dabc01f-6add-490b-bc8c-0bde32757864" TextString="[out_estimateNumber]" Version="V5">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable BrowserURL="uat.openinvoice.com/docp/app/ticket/index.html" ContentHash="OT8MhsZaKkS9_DfBNhRzxg" DesignTimeRectangle="40, 812, 588, 34" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl name='ade_Estimate Number_value' parentid='ticketHeaderCollapse' tag='DIV' /&gt;" Guid="d3759e16-c24d-4ebc-99cf-6c7384041758" InformativeScreenshot="d883d9a393d166b9800a1dda3cd221c0.png" Reference="2HNzGrMgqE2vTNIlI6sEcw/ClDjMpAgHUOE5PUaehZ29g" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                      </uix:NGetText.Target>
+                    </uix:NGetText>
+                  </Sequence>
+                </TryCatch.Try>
+                <TryCatch.Catches>
+                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="422.4,160.8" sap2010:WorkflowViewState.IdRef="Catch`1_22">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ActivityAction x:TypeArguments="s:Exception">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,89.6" sap2010:WorkflowViewState.IdRef="Sequence_153">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </ActivityAction>
+                  </Catch>
+                </TryCatch.Catches>
+                <TryCatch.Finally>
+                  <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="419.2,89.6" sap2010:WorkflowViewState.IdRef="Sequence_154">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </TryCatch.Finally>
+              </TryCatch>
+              <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-0' ReferenceIdx='0' Name='Column-0'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='#' ReferenceIdx='1' Name='#'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Alert' ReferenceIdx='2' Name='Alert'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Part # / Item ID' ReferenceIdx='3' Name='Part # / Item ID'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Description' ReferenceIdx='4' Name='Description'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Service Start' ReferenceIdx='5' Name='Service Start'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Service End' ReferenceIdx='6' Name='Service End'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Hours Worked' ReferenceIdx='7' Name='Hours Worked'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='WBS/CC/PC' ReferenceIdx='8' Name='WBS/CC/PC'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Lease' ReferenceIdx='9' Name='Lease'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Coding' ReferenceIdx='10' Name='Coding'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Location' ReferenceIdx='11' Name='Location'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Hauled Ticket' ReferenceIdx='12' Name='Hauled Ticket'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Hauled Location' ReferenceIdx='13' Name='Hauled Location'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Fluid Hauled' ReferenceIdx='14' Name='Fluid Hauled'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Gauge Start' ReferenceIdx='15' Name='Gauge Start'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Gauge Finish' ReferenceIdx='16' Name='Gauge Finish'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Volume' ReferenceIdx='17' Name='Volume'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Charge By' ReferenceIdx='18' Name='Charge By'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Quantity' ReferenceIdx='19' Name='Quantity'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Units' ReferenceIdx='20' Name='Units'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Rate' ReferenceIdx='21' Name='Rate'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Qualifier' ReferenceIdx='22' Name='Qualifier'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Subtotal' ReferenceIdx='23' Name='Subtotal'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Column-0' attr='fulltext' /&gt;&lt;column name='#' attr='fulltext' /&gt;&lt;column name='Alert' attr='fulltext' /&gt;&lt;column name='Part # / Item ID' attr='fulltext' /&gt;&lt;column name='Description' attr='fulltext' /&gt;&lt;column name='Service Start' attr='fulltext' /&gt;&lt;column name='Service End' attr='fulltext' /&gt;&lt;column name='Hours Worked' attr='fulltext' /&gt;&lt;column name='WBS/CC/PC' attr='fulltext' /&gt;&lt;column name='Lease' attr='fulltext' /&gt;&lt;column name='Coding' attr='fulltext' /&gt;&lt;column name='Location' attr='fulltext' /&gt;&lt;column name='Hauled Ticket' attr='fulltext' /&gt;&lt;column name='Hauled Location' attr='fulltext' /&gt;&lt;column name='Fluid Hauled' attr='fulltext' /&gt;&lt;column name='Gauge Start' attr='fulltext' /&gt;&lt;column name='Gauge Finish' attr='fulltext' /&gt;&lt;column name='Volume' attr='fulltext' /&gt;&lt;column name='Charge By' attr='fulltext' /&gt;&lt;column name='Quantity' attr='fulltext' /&gt;&lt;column name='Units' attr='fulltext' /&gt;&lt;column name='Rate' attr='fulltext' /&gt;&lt;column name='Qualifier' attr='fulltext' /&gt;&lt;column name='Subtotal' attr='fulltext' /&gt;&lt;/extract-table&gt;" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="507.2,180.8" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="7dabc01f-6add-490b-bc8c-0bde32757864" Version="V5">
+                <uix:NExtractData.Target>
+                  <uix:TargetAnchorable BrowserURL="https://uat.openinvoice.com/docp/app/ticket/index.html#!/receipt/detail/41771353?navigateFrom=ticketApp" DesignTimeRectangle="40, 715, 2406, 167" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;p2p-root&amp;gt;div&amp;gt;div&amp;gt;p2p-receipt-main&amp;gt;div&amp;gt;p2p-receipt-detail-view&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p2p-receipt-detail&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p2p-line-items-list&amp;gt;div&amp;gt;table' name='lineItemsTable' tag='TABLE' /&gt;" Guid="4f134c2c-88ff-458a-b798-e973835ef748" InformativeScreenshot="ac55d96b9a3b307ce0a19d02d069956b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                </uix:NExtractData.Target>
+              </uix:NExtractData>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.OCREngine>
+          <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+            <ActivityFunc.Argument>
+              <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+            </ActivityFunc.Argument>
+          </ActivityFunc>
+        </uix:NApplicationCard.OCREngine>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="1912, -8, 1616, 868" BrowserType="Chrome" ContentHash="K4BR_0d6ZE2NcJ9bEdjv1g" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADnSURBVDhPY2BgYPhPIcYQIBVjCJCKMQT+NzQ0/J88eTIGdnd3x1CL1YD79+//xwZqa2sx1OI1wNfX97+qqiocCwkJYajFa4C+vj6GHAbuPh//P6bT/j+XGNt/78WaYJxx0O1/7lHv/4Er9eFiIKziL4JpQOOBiP+h9db/OUVZ/7tOVwPjwsNB/8tPRvz3W6APFwNhJS9aeAGLAOkGGLgr/p9wPRmO1Q0U/0tLS/8/cODA/6dPn8Jxfn4+umaIAZp2Mv9rdobCsYA4N1hy4cKF/48ePQrHCQkJ6JohBlCIMQRIxRgCJGEAlx9yvKhOkYMAAAAASUVORK5CYII=" InformativeScreenshot="8d7000096517ddbe9aa4da29a42da260.jpg" Reference="2HNzGrMgqE2vTNIlI6sEcw/R3BN54epI02jX31-udIZcg" Selector="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" Version="V2">
+            <uix:TargetApp.Arguments>
+              <InArgument x:TypeArguments="x:String" />
+            </uix:TargetApp.Arguments>
+            <uix:TargetApp.WorkingDirectory>
+              <InArgument x:TypeArguments="x:String" />
+            </uix:TargetApp.WorkingDirectory>
+          </uix:TargetApp>
+        </uix:NApplicationCard.TargetApp>
+      </uix:NApplicationCard>
+      <ui:FilterDataTable DataTable="[ExtractDataTable]" DisplayName="Filter out weird extra rows" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="574.4,194.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[ExtractDataTable]" SelectColumnsMode="Remove">
+        <ui:FilterDataTable.Filters>
+          <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="8">
+            <ui:FilterOperationArgument BooleanOperator="And" Operator="CONTAINS">
+              <ui:FilterOperationArgument.Column>
+                <InArgument x:TypeArguments="x:String">["Lease"]</InArgument>
+              </ui:FilterOperationArgument.Column>
+              <ui:FilterOperationArgument.Operand>
+                <InArgument x:TypeArguments="x:String">["Water"]</InArgument>
+              </ui:FilterOperationArgument.Operand>
+            </ui:FilterOperationArgument>
+            <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
+              <ui:FilterOperationArgument.Column>
+                <InArgument x:TypeArguments="x:String">["Lease"]</InArgument>
+              </ui:FilterOperationArgument.Column>
+              <ui:FilterOperationArgument.Operand>
+                <InArgument x:TypeArguments="x:String">["TPP"]</InArgument>
+              </ui:FilterOperationArgument.Operand>
+            </ui:FilterOperationArgument>
+            <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
+              <ui:FilterOperationArgument.Column>
+                <InArgument x:TypeArguments="x:String">["Lease"]</InArgument>
+              </ui:FilterOperationArgument.Column>
+              <ui:FilterOperationArgument.Operand>
+                <InArgument x:TypeArguments="x:String">["Truck"]</InArgument>
+              </ui:FilterOperationArgument.Operand>
+            </ui:FilterOperationArgument>
+            <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
+              <ui:FilterOperationArgument.Column>
+                <InArgument x:TypeArguments="x:String">["Lease"]</InArgument>
+              </ui:FilterOperationArgument.Column>
+              <ui:FilterOperationArgument.Operand>
+                <InArgument x:TypeArguments="x:String">["Disposal"]</InArgument>
+              </ui:FilterOperationArgument.Operand>
+            </ui:FilterOperationArgument>
+            <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
+              <ui:FilterOperationArgument.Column>
+                <InArgument x:TypeArguments="x:String">["Lease"]</InArgument>
+              </ui:FilterOperationArgument.Column>
+              <ui:FilterOperationArgument.Operand>
+                <InArgument x:TypeArguments="x:String">["Transfer"]</InArgument>
+              </ui:FilterOperationArgument.Operand>
+            </ui:FilterOperationArgument>
+            <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
+              <ui:FilterOperationArgument.Column>
+                <InArgument x:TypeArguments="x:String">["Lease"]</InArgument>
+              </ui:FilterOperationArgument.Column>
+              <ui:FilterOperationArgument.Operand>
+                <InArgument x:TypeArguments="x:String">["Produced"]</InArgument>
+              </ui:FilterOperationArgument.Operand>
+            </ui:FilterOperationArgument>
+          </scg:List>
+        </ui:FilterDataTable.Filters>
+        <ui:FilterDataTable.SelectColumns>
+          <scg:List x:TypeArguments="InArgument" Capacity="4">
+            <x:Null />
+          </scg:List>
+        </ui:FilterDataTable.SelectColumns>
+      </ui:FilterDataTable>
+      <ui:OutputDataTable DataTable="[ExtractDataTable]" DisplayName="Output Data Table as Text" sap:VirtualizedContainerService.HintSize="574.4,112.8" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[out_TicketDetails]" />
+      <Assign sap:VirtualizedContainerService.HintSize="574.4,115.2" sap2010:WorkflowViewState.IdRef="Assign_20">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[out_summaryDetails]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String" xml:space="preserve">["Ticket Name: " &amp; out_CurrentTicket &amp; ";" &amp; "Price Book Name: " &amp; priceBookName &amp;";" &amp; "Service Date: " &amp; serviceDate &amp; ";" &amp; "Currency: " &amp; out_TicketCurrency &amp; ";" &amp; "Truck Number: " &amp; truckNumber &amp; ";" &amp; "Driver Name: " &amp; driverName &amp; ";" &amp; "Total " &amp; ticketTotal &amp; ";" &amp; "Alert Status: " &amp; alertStatus &amp; ";" &amp; "Description: " &amp; out_ticketDescription &amp; ";" &amp;  "Estimate Number: " &amp; out_estimateNumber &amp; ";" &amp; _
+"Missing Fields: " &amp; out_missingFieldSummary]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="574.4,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_19" Level="Info" Message="[out_summaryDetails]" />
+    </Sequence>
+  </Sequence>
+</Activity>

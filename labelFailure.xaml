@@ -10,6 +10,7 @@
         <RequiredArgumentAttribute />
       </x:Property.Attributes>
     </x:Property>
+    <x:Property Name="in_CurrentRequisitioner" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
@@ -206,13 +207,13 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap:VirtualizedContainerService.HintSize="1065.6000000000001,3314.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap:VirtualizedContainerService.HintSize="1296.0000000000002,3262.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome OpenInvoice" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="516.8,3291.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InteractionMode="DebuggerApi" ScopeGuid="d76ceb9a-30bb-44ba-b2c8-72afcfe2cb1c" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome OpenInvoice" HealingAgentBehavior="[UiPath.UIAutomationNext.Enums.NHealingAgentBehavior.Disabled]" sap:VirtualizedContainerService.HintSize="516.8,3239.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Never]" ScopeGuid="d76ceb9a-30bb-44ba-b2c8-72afcfe2cb1c" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -323,7 +324,7 @@
                 <uix:TargetAnchorable BrowserURL="uat.openinvoice.com/docp/app/ticket/index.html" CVScreenId="fc6d9e8b-fe8d-4262-bd19-4e6f17ca9bd3" ContentHash="lYDy36UFr0-buNcIA7qJLQ" CvElementArea="39, 411, 86, 33" CvTextArea="50, 420, 64, 11" CvTextArgument="Edit Header" CvType="Button" DesignTimeRectangle="40, 412, 84, 30" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='editHeaderBtn' parentid='ticketHeaderCollapse' tag='A' /&gt;" Guid="df7a44ed-9a84-4247-833e-f2d8d429b651" InformativeScreenshot="f591c973959b45da61a4774c270b8e1d.png" Reference="2HNzGrMgqE2vTNIlI6sEcw/eNdXas2dWE6UebtyjrtM-A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Requisitioner  *'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="449.6,241.6" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="SameAsCard" ScopeIdentifier="d76ceb9a-30bb-44ba-b2c8-72afcfe2cb1c" Text="RPA Fail" Version="V5">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Requisitioner  *'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="449.6,241.6" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="SameAsCard" ScopeIdentifier="d76ceb9a-30bb-44ba-b2c8-72afcfe2cb1c" Text="[in_CurrentRequisitioner]" Version="V5">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="uat.openinvoice.com/docp/app/ticket/index.html" ContentHash="qIaDBjK0i0CnOhI7hArJMA" DesignTimeRectangle="723, 276, 413, 34" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='orderedByNameInput' tag='INPUT' type='text' class='form-control ng-pristine ng-untouched ng-valid ng-not-empty' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="09979c66-8887-44d0-9a45-0f6d3c147cbb" InformativeScreenshot="fbf7a9c1cb3091a4bbb88ae1a02ad3d1.png" IsResponsive="True" Reference="2HNzGrMgqE2vTNIlI6sEcw/UjYA2Wr6ok2qZw5j7T5QLg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -425,7 +426,7 @@
         </ActivityFunc>
       </uix:NApplicationCard.OCREngine>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="1912, -8, 1616, 868" BrowserType="Chrome" ContentHash="K4BR_0d6ZE2NcJ9bEdjv1g" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADnSURBVDhPY2BgYPhPIcYQIBVjCJCKMQT+NzQ0/J88eTIGdnd3x1CL1YD79+//xwZqa2sx1OI1wNfX97+qqiocCwkJYajFa4C+vj6GHAbuPh//P6bT/j+XGNt/78WaYJxx0O1/7lHv/4Er9eFiIKziL4JpQOOBiP+h9db/OUVZ/7tOVwPjwsNB/8tPRvz3W6APFwNhJS9aeAGLAOkGGLgr/p9wPRmO1Q0U/0tLS/8/cODA/6dPn8Jxfn4+umaIAZp2Mv9rdobCsYA4N1hy4cKF/48ePQrHCQkJ6JohBlCIMQRIxRgCJGEAlx9yvKhOkYMAAAAASUVORK5CYII=" InformativeScreenshot="8d7000096517ddbe9aa4da29a42da260.jpg" Reference="2HNzGrMgqE2vTNIlI6sEcw/R3BN54epI02jX31-udIZcg" Selector="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" Url="https://uat.openinvoice.com/docp/app/ticket/index.html#!/receipt/detail/41771353?navigateFrom=ticketApp" Version="V2">
+        <uix:TargetApp Area="1912, -8, 1616, 868" BrowserType="Chrome" ContentHash="K4BR_0d6ZE2NcJ9bEdjv1g" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADnSURBVDhPY2BgYPhPIcYQIBVjCJCKMQT+NzQ0/J88eTIGdnd3x1CL1YD79+//xwZqa2sx1OI1wNfX97+qqiocCwkJYajFa4C+vj6GHAbuPh//P6bT/j+XGNt/78WaYJxx0O1/7lHv/4Er9eFiIKziL4JpQOOBiP+h9db/OUVZ/7tOVwPjwsNB/8tPRvz3W6APFwNhJS9aeAGLAOkGGLgr/p9wPRmO1Q0U/0tLS/8/cODA/6dPn8Jxfn4+umaIAZp2Mv9rdobCsYA4N1hy4cKF/48ePQrHCQkJ6JohBlCIMQRIxRgCJGEAlx9yvKhOkYMAAAAASUVORK5CYII=" InformativeScreenshot="8d7000096517ddbe9aa4da29a42da260.jpg" Reference="2HNzGrMgqE2vTNIlI6sEcw/R3BN54epI02jX31-udIZcg" Selector="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" Version="V2">
           <uix:TargetApp.Arguments>
             <InArgument x:TypeArguments="x:String" />
           </uix:TargetApp.Arguments>

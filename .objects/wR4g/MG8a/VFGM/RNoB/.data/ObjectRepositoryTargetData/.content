@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="T1cPDLpZoUOYdSqhmjhK4w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="uat.openinvoice.com/docp/j_spring_security_check" CVScreenId="9af4f496-7b2d-4544-bc5d-a819e7f6494e" DesignTimeRectangle="804, 246, 338, 14" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='messageId' tag='SPAN' aaname='The username or password you entered is incorrect. Please try again.' /&gt;" Guid="23ab2977-ffdc-4a35-b1f7-591c9694ad6a" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
+      <imageRef attrName="InformativeScreenshot" originalValue="829554c42113acb0b1141156cf88a910.png" xmlns="">0vCScBlcsqkKVw8aa_eGKMA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

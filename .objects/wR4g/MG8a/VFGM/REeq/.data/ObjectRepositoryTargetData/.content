@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="xx0HwIOiYEehYmj4XEiqAg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="qQkqO-gtPUqMLWtSa8NDUQ" Reference="2HNzGrMgqE2vTNIlI6sEcw/REeqqkJgTk2gvy8IVD5FaA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="uat.openinvoice.com/docp/app/ticket/index.html" DesignTimeRectangle="60, 389, 298, 18" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl name='compliance-summary-yellow' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl name='compliance-summary-yellow' tag='SPAN' type='' class='text-warning' matching:name='fuzzy' fuzzylevel:name='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' /&gt;" Guid="a86d4357-bb4c-4658-9720-3ae944ef6653" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="uat.openinvoice.com/docp/app/ticket/index.html" CVScreenId="485919b3-c3d2-429e-b441-c7c682f8a62f" CvType="AnyWordGroup" DesignTimeRectangle="50, 323, 238, 14" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl name='compliance-summary-*' tag='SPAN' /&gt;" Guid="17ab3bfd-fef2-437f-94d0-efd74fe11c3b" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
       <TargetAnchorable.Anchors>
         <scg:List x:TypeArguments="ITarget" Capacity="4">
-          <Target DesignTimeRectangle="24, 388, 26, 21" FullSelectorArgument="&lt;webctrl idx='3' parentid='receiptDetail' tag='I' /&gt;" Guid="1bbca3f5-83f5-4b3d-941c-030b98d8c11e" SearchSteps="Selector" />
+          <Target CVScreenId="485919b3-c3d2-429e-b441-c7c682f8a62f" DesignTimeRectangle="21, 322, 21, 16" FullSelectorArgument="&lt;webctrl idx='3' parentid='receiptDetail' tag='I' /&gt;" Guid="7932f090-27c5-4303-8705-081349a29678" SearchSteps="Selector" />
         </scg:List>
       </TargetAnchorable.Anchors>
-      <imageRef attrName="InformativeScreenshot" originalValue="c1234dd22d6612c83901da101449ee5c.png" xmlns="">0OPiILGwLlEO0FkQo7IwFLg</imageRef>
+      <imageRef attrName="InformativeScreenshot" originalValue="67637efa97f71bd21d7892067bbf5133.png" xmlns="">0vNlFLjwrV0yKKeHxrtHhOA</imageRef>
     </TargetAnchorable>
     <x:String x:Key="ActivityType">GetText</x:String>
   </ObjectRepositoryTargetData.Data>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="nszmzt6ZEEqAgAWXCFxGKw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="uat.openinvoice.com/docp/app/ticket/index.html" CVScreenId="774fbc82-b272-4bb4-8be4-68b7bea53f3d" DesignTimeRectangle="1771, 223, 129, 21" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl name='supplier-name' tag='SPAN' /&gt;" Guid="1aaee379-3ce1-42f3-8ff1-1fbe2e5cdb8b" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="abf9e155074a46dfa677398bfb867c13.png" xmlns="">06MUjwUKNEEqZokB9VwiQ6w</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

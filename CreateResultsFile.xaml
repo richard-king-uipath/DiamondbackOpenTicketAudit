@@ -11,6 +11,7 @@
       </x:Property.Attributes>
     </x:Property>
     <x:Property Name="out_ResultsFilePath" Type="OutArgument(x:String)" />
+    <x:Property Name="in_FileName" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
@@ -103,7 +104,7 @@
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CreateResultsFile" sap:VirtualizedContainerService.HintSize="1135.2,350.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CreateResultsFile" sap:VirtualizedContainerService.HintSize="913.6,355.944" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -114,7 +115,7 @@
         <OutArgument x:TypeArguments="x:String">[out_ResultsFilePath]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:String">[in_ResultsFolder+"OTResults-" + now.tostring("yyyy-MM-dd-HH-mm-ss") + ".xlsx"]</InArgument>
+        <InArgument x:TypeArguments="x:String">[in_ResultsFolder+ in_FileName + "-" + now.tostring("yyyy-MM-dd-HH-mm-ss") + ".xlsx"]</InArgument>
       </Assign.Value>
     </Assign>
     <ui:CopyFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[out_ResultsFilePath]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="433.6,213.6" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="[in_TemplateFilePath]" />

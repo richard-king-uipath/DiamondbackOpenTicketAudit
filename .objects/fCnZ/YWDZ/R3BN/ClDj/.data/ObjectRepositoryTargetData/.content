@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="OT8MhsZaKkS9_DfBNhRzxg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="uat.openinvoice.com/docp/app/ticket/index.html" DesignTimeRectangle="40, 812, 588, 34" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl name='ade_Estimate Number_value' parentid='ticketHeaderCollapse' tag='DIV' /&gt;" Guid="d3759e16-c24d-4ebc-99cf-6c7384041758" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="d883d9a393d166b9800a1dda3cd221c0.png" xmlns="">0sZEydB24QUiMBYyK-omikA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

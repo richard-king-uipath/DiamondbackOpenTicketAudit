@@ -1,0 +1,14 @@
+﻿{
+  "Name": "The username or passwor…",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "RNoBWHmiYkejhDr6dojsQA",
+  "Reference": "2HNzGrMgqE2vTNIlI6sEcw/RNoBWHmiYkejhDr6dojsQA",
+  "ParentRef": "2HNzGrMgqE2vTNIlI6sEcw/VFGMck2fg02qdq47t-BfHw",
+  "Created": "2025-11-21T13:59:11.0421808Z",
+  "Updated": "2025-11-21T13:59:11.0421808Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.19.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
