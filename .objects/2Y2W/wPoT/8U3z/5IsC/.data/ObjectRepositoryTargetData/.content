@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="MVPRMGc6T0CR4YxHiQwK3g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" CVScreenId="0418253c-1cf4-44ca-beaa-8c8252689607" CvElementArea="496, 84, 20, 20" CvType="Icon" DesignTimeRectangle="494, 82, 24, 24" ElementType="Icon" ElementVisibilityArgument="Interactive" Guid="408129bd-8209-481e-a3b4-db1179e8c8f6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAB7SURBVEhL7dDRCcAgDEVRB3NOJ8pCTtCSwIMQ0DyLpRT8OLSEklsttdbrTSUOdjuB1FJAREycz5xA6vtAa83ouw/4+QwV6L3bEwE/i99HaUBhIQLsckUFFCIryxUdUOy9e8MA+6c4WZxDGmA8Cvg7z8xOOgzscgKp/wduD0g0cXN8+tAAAAAASUVORK5CYII=" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='43f6bf58bd354080b75d8fca59a8d53e - Google Chrome' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="0413bd63975a8da45fa49403f26783e8.png" xmlns="">0iTpd3xUzWkW16ajl-UJprg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

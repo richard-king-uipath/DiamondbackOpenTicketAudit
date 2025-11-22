@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="SlQqoNtZlE2UThzDb0d0Gg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="gEgZiuhJOkWw5xGMyKphyw" Reference="2HNzGrMgqE2vTNIlI6sEcw/A9ohY-nw5kSNmZmeOhLmeA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" CVScreenId="95e84d1a-f280-467e-811d-177e71373387" CvElementArea="17, 12, 237, 36" CvTextArea="51, 22, 47, 12" CvTextArgument="New Tab" CvType="Button" DesignTimeRectangle="8, 8, 256, 41" ElementType="TabPage" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='New Tab - Google Chrome' role='pane' /&gt;&lt;ctrl name='New Tab' role='page tab' /&gt;" Guid="60f09fbd-2f28-4e1d-936c-7482dd00763a" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='New Tab - Google Chrome' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="4fd141b0635aa316be55da404b4cf080.png" xmlns="">0p5V9s2RJQkapi_2NXE0t0w</imageRef>
+    <TargetAnchorable x:Key="TargetAnchorable" CVScreenId="95e84d1a-f280-467e-811d-177e71373387" DesignTimeRectangle="8, 8, 256, 41" ElementType="TabPage" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='New Tab - Google Chrome' role='pane' /&gt;&lt;ctrl name='New Tab' role='page tab' /&gt;" Guid="60f09fbd-2f28-4e1d-936c-7482dd00763a" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='New Tab - Google Chrome' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="4fd141b0635aa316be55da404b4cf080.png" xmlns="">0h3haIPSoXUeRDb6WJFcoTw</imageRef>
     </TargetAnchorable>
     <x:String x:Key="ActivityType">CheckState</x:String>
   </ObjectRepositoryTargetData.Data>

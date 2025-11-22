@@ -6,6 +6,7 @@
   "dependencies": {
     "UiPath.DocumentUnderstanding.Activities": "[2.16.1]",
     "UiPath.DocumentUnderstanding.ML.Activities": "[1.36.0]",
+    "UiPath.DocumentUnderstanding.OCR.LocalServer": "[1.5.1]",
     "UiPath.Excel.Activities": "[2.20.2]",
     "UiPath.IntelligentOCR.Activities": "[6.27.0]",
     "UiPath.System.Activities": "[25.8.0]",
@@ -16,7 +17,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "25.0.172.0",
-  "projectVersion": "1.0.0",
+  "projectVersion": "1.0.1",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
