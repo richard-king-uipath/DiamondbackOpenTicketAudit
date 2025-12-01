@@ -464,7 +464,7 @@
                                   <OutArgument x:TypeArguments="x:String">[Out_missingFieldSummary]</OutArgument>
                                 </Assign.To>
                                 <Assign.Value>
-                                  <InArgument x:TypeArguments="x:String">[Out_missingFieldSummary &amp; "Price Book Name; "]</InArgument>
+                                  <InArgument x:TypeArguments="x:String">[Out_missingFieldSummary &amp; "Price Book Name;"]</InArgument>
                                 </Assign.Value>
                               </Assign>
                             </Sequence>
@@ -494,7 +494,7 @@
                               <OutArgument x:TypeArguments="x:String">[out_CommentsFromOT]</OutArgument>
                             </Assign.To>
                             <Assign.Value>
-                              <InArgument x:TypeArguments="x:String">[out_CommentsFromOT &amp; "Price Book missing, "]</InArgument>
+                              <InArgument x:TypeArguments="x:String">[out_CommentsFromOT &amp; "Price Book missing;"]</InArgument>
                             </Assign.Value>
                           </Assign>
                         </Sequence>
@@ -873,7 +873,7 @@
                               <OutArgument x:TypeArguments="x:String">[out_CommentsFromOT]</OutArgument>
                             </Assign.To>
                             <Assign.Value>
-                              <InArgument x:TypeArguments="x:String">[out_CommentsFromOT &amp; "Estimate Number not 6 digits; "]</InArgument>
+                              <InArgument x:TypeArguments="x:String">[out_CommentsFromOT &amp; "Estimate Number not 6 digits;"]</InArgument>
                             </Assign.Value>
                           </Assign>
                         </Sequence>
@@ -1016,7 +1016,7 @@
           <OutArgument x:TypeArguments="x:String">[out_summaryDetails]</OutArgument>
         </Assign.To>
         <Assign.Value>
-          <InArgument x:TypeArguments="x:String" xml:space="preserve">["Ticket Name: " &amp; out_CurrentTicket &amp; ";" &amp; "Price Book Name: " &amp; priceBookName &amp;";" &amp; "Service Date: " &amp; serviceDate &amp; ";" &amp; "Currency: " &amp; out_TicketCurrency &amp; ";" &amp; "Truck Number: " &amp; truckNumber &amp; ";" &amp; "Driver Name: " &amp; driverName &amp; ";" &amp; "Total " &amp; ticketTotal &amp; ";" &amp; "Alert Status: " &amp; alertStatus &amp; ";" &amp; "Description: " &amp; out_ticketDescription &amp; ";" &amp;  "Estimate Number: " &amp; out_estimateNumber &amp; ";" &amp; _
+          <InArgument x:TypeArguments="x:String" xml:space="preserve">["Ticket Name: " &amp; out_CurrentTicket &amp; ";"  &amp; "Service Date: " &amp; serviceDate &amp; ";" &amp; "Currency: " &amp; out_TicketCurrency &amp; ";" &amp; "Truck Number: " &amp; truckNumber &amp; ";" &amp; "Driver Name: " &amp; driverName &amp; ";" &amp; "Total " &amp; ticketTotal &amp; ";" &amp; "Price Book Alert: " &amp; alertStatus &amp; ";" &amp; "Description: " &amp; out_ticketDescription &amp; ";"  &amp; _
 "Missing Fields: " &amp; out_missingFieldSummary]</InArgument>
         </Assign.Value>
       </Assign>
