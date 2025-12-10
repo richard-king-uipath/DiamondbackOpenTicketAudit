@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="pf9JDyzB_kWMfSvVuLH6Ug" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="NWcCM-fxfUedv-eX9PfiTA" Reference="2HNzGrMgqE2vTNIlI6sEcw/ut-oJ5ZA1Um40PipG5YbWg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="uat.openinvoice.com/docp/app/ticket/index.html" DesignTimeRectangle="816, 836, 51, 17" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl aaname='Comment' parentid='CommentId' tag='DIV' type='' class='text-center small' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Comment' /&gt;" Guid="57594d17-2960-4571-9794-ee47c2c62984" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
-      <TargetAnchorable.Anchors>
-        <scg:List x:TypeArguments="ITarget" Capacity="4">
-          <Target DesignTimeRectangle="803, 809, 77, 51" ElementType="Button" FullSelectorArgument="&lt;webctrl id='CommentId' tag='BUTTON' /&gt;" Guid="c32e68a1-1b17-4d52-946e-a877509b295d" SearchSteps="Selector" />
-        </scg:List>
-      </TargetAnchorable.Anchors>
-      <imageRef attrName="InformativeScreenshot" originalValue="9cf289e203fde563d9cd61404d629c39.png" xmlns="">0dy00FS864k-gBOujxxLhdw</imageRef>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="uat.openinvoice.com/docp/app/ticket/index.html" DesignTimeRectangle="973, 1021, 41, 13" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl aaname='Comment' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' parentid='CommentId' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' check:innerText='Comment' /&gt;" Guid="57594d17-2960-4571-9794-ee47c2c62984" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="f2031272f149907936b51a8d6c537627.png" xmlns="">0lb46Z1i3-kq_Kh746mE97g</imageRef>
     </TargetAnchorable>
     <x:String x:Key="ActivityType">Click</x:String>
   </ObjectRepositoryTargetData.Data>
