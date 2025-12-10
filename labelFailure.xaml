@@ -207,44 +207,28 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap:VirtualizedContainerService.HintSize="1296.0000000000002,3262.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap:VirtualizedContainerService.HintSize="1230.4,3148" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome OpenInvoice" HealingAgentBehavior="[UiPath.UIAutomationNext.Enums.NHealingAgentBehavior.Disabled]" sap:VirtualizedContainerService.HintSize="516.8,3239.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Never]" ScopeGuid="d76ceb9a-30bb-44ba-b2c8-72afcfe2cb1c" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome OpenInvoice" HealingAgentBehavior="[UiPath.UIAutomationNext.Enums.NHealingAgentBehavior.Disabled]" sap:VirtualizedContainerService.HintSize="516.8,3124.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Never]" ScopeGuid="d76ceb9a-30bb-44ba-b2c8-72afcfe2cb1c" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="483.2,3085.6" sap2010:WorkflowViewState.IdRef="Sequence_38">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="483.2,2971.2" sap2010:WorkflowViewState.IdRef="Sequence_38">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Comment'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="449.6,304" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d76ceb9a-30bb-44ba-b2c8-72afcfe2cb1c" Version="V5">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Comment'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="449.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d76ceb9a-30bb-44ba-b2c8-72afcfe2cb1c" Version="V5">
               <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="uat.openinvoice.com/docp/app/ticket/index.html" ContentHash="pf9JDyzB_kWMfSvVuLH6Ug" DesignTimeRectangle="816, 836, 51, 17" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl aaname='Comment' parentid='CommentId' tag='DIV' type='' class='text-center small' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Comment' /&gt;" Guid="57594d17-2960-4571-9794-ee47c2c62984" InformativeScreenshot="9cf289e203fde563d9cd61404d629c39.png" Reference="2HNzGrMgqE2vTNIlI6sEcw/ut-oJ5ZA1Um40PipG5YbWg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
-                  <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                      <uix:Target DesignTimeRectangle="803, 809, 77, 51" ElementType="Button" FullSelectorArgument="&lt;webctrl id='CommentId' tag='BUTTON' /&gt;" Guid="c32e68a1-1b17-4d52-946e-a877509b295d" SearchSteps="Selector" />
-                    </scg:List>
-                  </uix:TargetAnchorable.Anchors>
-                </uix:TargetAnchorable>
+                <uix:TargetAnchorable BrowserURL="uat.openinvoice.com/docp/app/ticket/index.html" ContentHash="NWcCM-fxfUedv-eX9PfiTA" DesignTimeRectangle="973, 1021, 41, 13" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl aaname='Comment' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' parentid='CommentId' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' check:innerText='Comment' /&gt;" Guid="57594d17-2960-4571-9794-ee47c2c62984" InformativeScreenshot="f2031272f149907936b51a8d6c537627.png" Reference="2HNzGrMgqE2vTNIlI6sEcw/ut-oJ5ZA1Um40PipG5YbWg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NClick.Target>
-              <uix:NClick.VerifyOptions>
-                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                  <uix:VerifyExecutionOptions.Retry>
-                    <InArgument x:TypeArguments="x:Boolean" />
-                  </uix:VerifyExecutionOptions.Retry>
-                  <uix:VerifyExecutionOptions.Timeout>
-                    <InArgument x:TypeArguments="x:Double" />
-                  </uix:VerifyExecutionOptions.Timeout>
-                </uix:VerifyExecutionOptions>
-              </uix:NClick.VerifyOptions>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
