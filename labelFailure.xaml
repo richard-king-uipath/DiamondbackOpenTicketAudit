@@ -207,7 +207,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap:VirtualizedContainerService.HintSize="1230.4,3148" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap:VirtualizedContainerService.HintSize="996.0000000000001,3148" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -414,6 +414,9 @@
           <uix:TargetApp.Arguments>
             <InArgument x:TypeArguments="x:String" />
           </uix:TargetApp.Arguments>
+          <uix:TargetApp.Url>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.Url>
           <uix:TargetApp.WorkingDirectory>
             <InArgument x:TypeArguments="x:String" />
           </uix:TargetApp.WorkingDirectory>

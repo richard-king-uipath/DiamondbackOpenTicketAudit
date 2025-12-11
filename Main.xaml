@@ -29,6 +29,7 @@
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Linq.Expressions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -72,6 +73,13 @@
       <AssemblyReference>System.Security.Permissions</AssemblyReference>
       <AssemblyReference>System.ComponentModel</AssemblyReference>
       <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -79,9 +87,11 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="This template can be used when there is only one transaction and a queue is not required.  It provides best practice features:  &#xA;&#xA;1.  storing values and asset names in a config file  &#xA;2.  configurable retry  &#xA;3.  basic exception handling.  &#xA;4. Exception screenshot.&#xA;" sap:VirtualizedContainerService.HintSize="1062.4,961.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+  <Sequence sap2010:Annotation.AnnotationText="This template can be used when there is only one transaction and a queue is not required.  It provides best practice features:  &#xA;&#xA;1.  storing values and asset names in a config file  &#xA;2.  configurable retry  &#xA;3.  basic exception handling.  &#xA;4. Exception screenshot.&#xA;" sap:VirtualizedContainerService.HintSize="1062.4,3148" sap2010:WorkflowViewState.IdRef="Sequence_3">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="Config" />
+      <Variable x:TypeArguments="x:String" Name="TechnicalResultsFilePath" />
+      <Variable x:TypeArguments="x:String" Name="BusinessResultsFilePath" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -89,35 +99,61 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Starting Process.&quot;]" />
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitAllSettings workflow" sap:VirtualizedContainerService.HintSize="452.8,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="InitAllSettings.xaml">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="587.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Starting Process.&quot;]" />
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitAllSettings workflow" sap:VirtualizedContainerService.HintSize="587.2,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="InitAllSettings.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_ConfigFile">Data\Config.xlsx</InArgument>
         <InArgument x:TypeArguments="s:String[]" x:Key="in_ConfigSheets">[{"Settings","Constants"}]</InArgument>
         <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="out_Config">[Config]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="523.2,1845.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="587.2,2532.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence sap:VirtualizedContainerService.HintSize="486.4,587.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence sap:VirtualizedContainerService.HintSize="550.4,1066.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:RetryScope LogRetriedExceptions="{x:Null}" RetriedExceptionsLogLevel="{x:Null}" sap2010:Annotation.AnnotationText="NumberOfRetries = 1 is the minimum.  &quot;NumberOfRetries&quot; is really the number of tries.  So for instance, setting it to 2 would be 1 try and 1 retry.  Setting it to 1 means it will try only 1 time.&#xA;" DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="449.6,527.2" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="[cint(Config(&quot;MaxRetryNumber&quot;))]" RetryInterval="[Timespan.Parse(&quot;00:00:&quot; + Config(&quot;RetryDelaySeconds&quot;).ToString)]">
+          <ui:RetryScope LogRetriedExceptions="{x:Null}" RetriedExceptionsLogLevel="{x:Null}" sap2010:Annotation.AnnotationText="NumberOfRetries = 1 is the minimum.  &quot;NumberOfRetries&quot; is really the number of tries.  So for instance, setting it to 2 would be 1 try and 1 retry.  Setting it to 1 means it will try only 1 time.&#xA;" DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="516.8,1006.4" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="[cint(Config(&quot;MaxRetryNumber&quot;))]" RetryInterval="[Timespan.Parse(&quot;00:00:&quot; + Config(&quot;RetryDelaySeconds&quot;).ToString)]">
             <ui:RetryScope.ActivityBody>
               <ActivityAction>
-                <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="416,227.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="483.2,706.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke MainProcessFlowchart workflow" sap:VirtualizedContainerService.HintSize="382.4,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="MainProcessFlowchart.xaml">
+                  <Sequence sap2010:Annotation.AnnotationText="We ned to create the files here so that in case of job fault, we still complete and move partial results files." DisplayName="Create Report Files" sap:VirtualizedContainerService.HintSize="449.6,479.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CreateResultsFile - Invoke Workflow File (CreateResultsFile.xaml)" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="CreateResultsFile.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_TemplateFilePath">Data\Input\ResultsTemplate.xlsx</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_ResultsFolder">[config("FolderPathForResultsFiles").ToString]</InArgument>
+                        <OutArgument x:TypeArguments="x:String" x:Key="out_ResultsFilePath">[TechnicalResultsFilePath]</OutArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_FileName">OT Technical Results</InArgument>
+                      </ui:InvokeWorkflowFile.Arguments>
+                    </ui:InvokeWorkflowFile>
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Create Business ResultsFile - Invoke Workflow File (CreateResultsFile.xaml)" sap:VirtualizedContainerService.HintSize="416,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="CreateResultsFile.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_TemplateFilePath">Data\Input\BusinessResultsTemplate.xlsx</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_ResultsFolder">[config("FolderPathForResultsFiles").ToString]</InArgument>
+                        <OutArgument x:TypeArguments="x:String" x:Key="out_ResultsFilePath">[BusinessResultsFilePath]</OutArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_FileName">OT Business Results</InArgument>
+                      </ui:InvokeWorkflowFile.Arguments>
+                    </ui:InvokeWorkflowFile>
+                  </Sequence>
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke MainProcessFlowchart workflow" sap:VirtualizedContainerService.HintSize="449.6,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="MainProcessFlowchart.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
                       <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[Config]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="TechnicalResultsFilePath">[TechnicalResultsFilePath]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="BusinessResultsFilePath">[BusinessResultsFilePath]</InArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                 </Sequence>
@@ -135,7 +171,7 @@
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="489.6,840" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="553.6,1016" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -146,7 +182,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence sap:VirtualizedContainerService.HintSize="483.2,768.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence sap:VirtualizedContainerService.HintSize="547.2,944.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -158,7 +194,13 @@
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_FilePath" />
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Error" Message="[&quot;Encountered error: &quot; + exception.Message]" />
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Fatal" Message="[&quot;Encountered error: &quot; + exception.Message]" />
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="FinishandCopyExceFiles - Invoke Workflow File (FinishandCopyExceFiles.xaml)" sap:VirtualizedContainerService.HintSize="449.6,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="FinishandCopyExceFiles.xaml">
+                <ui:InvokeWorkflowFile.Arguments>
+                  <InArgument x:TypeArguments="x:String" x:Key="TechnicalResultsFilePath">[TechnicalResultsFilePath]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="BusinessResultsFilePath">[BusinessResultsFilePath]</InArgument>
+                </ui:InvokeWorkflowFile.Arguments>
+              </ui:InvokeWorkflowFile>
               <If Condition="[Config(&quot;FailJobOnSystemException&quot;).ToString = Boolean.TrueString]" sap:VirtualizedContainerService.HintSize="449.6,358.4" sap2010:WorkflowViewState.IdRef="If_1">
                 <If.Then>
                   <Rethrow sap2010:Annotation.AnnotationText="This rethrow makes the job fail if there was an exception.  If you don't want the job to fail,  change the setting above in the config file." sap:VirtualizedContainerService.HintSize="416,84.8" sap2010:WorkflowViewState.IdRef="Rethrow_1">
@@ -182,10 +224,10 @@
             </Sequence>
           </ActivityAction>
         </Catch>
-        <Catch x:TypeArguments="ui:BusinessRuleException" sap:VirtualizedContainerService.HintSize="489.6,106.4" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+        <Catch x:TypeArguments="ui:BusinessRuleException" sap:VirtualizedContainerService.HintSize="553.6,106.4" sap2010:WorkflowViewState.IdRef="Catch`1_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -193,7 +235,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:BusinessRuleException" Name="exception" />
             </ActivityAction.Argument>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="483.2,24.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;Business Rule Exception:  &quot; + exception.Message]">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="547.2,24.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;Business Rule Exception:  &quot; + exception.Message]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -205,6 +247,6 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452.8,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;Ending Process.&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="587.2,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;Ending Process.&quot;]" />
   </Sequence>
 </Activity>
