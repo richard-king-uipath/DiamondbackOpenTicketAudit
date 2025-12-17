@@ -187,28 +187,29 @@
       <AssemblyReference>NPOI</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="1151.2,4218.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap:VirtualizedContainerService.HintSize="1017.6000000000001,4208" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="790.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;Starting download of file to: &quot; + PDFfilePath]" />
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="790.4,4020.8" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="790.4,4010.4" sap2010:WorkflowViewState.IdRef="TryCatch_2">
       <TryCatch.Try>
-        <ui:GetActiveWindow ApplicationWindow="{x:Null}" DisplayName="Get Active Window" sap:VirtualizedContainerService.HintSize="753.6,3766.4" sap2010:WorkflowViewState.IdRef="GetActiveWindow_1">
+        <ui:GetActiveWindow ApplicationWindow="{x:Null}" DisplayName="Get Active Window" sap:VirtualizedContainerService.HintSize="753.6,3756" sap2010:WorkflowViewState.IdRef="GetActiveWindow_1">
           <ui:GetActiveWindow.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
               </ActivityAction.Argument>
-              <Sequence sap:VirtualizedContainerService.HintSize="718.4,3688" sap2010:WorkflowViewState.IdRef="Sequence_31">
+              <Sequence sap:VirtualizedContainerService.HintSize="718.4,3677.6" sap2010:WorkflowViewState.IdRef="Sequence_31">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="684.8,3628" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="684.8,3617.6" sap2010:WorkflowViewState.IdRef="Sequence_23">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -221,13 +222,13 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </Delay>
-                  <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Always]" DisplayName="Chrome CESTicketReport - All UDFs" HealingAgentBehavior="[UiPath.UIAutomationNext.Enums.NHealingAgentBehavior.Disabled]" sap:VirtualizedContainerService.HintSize="651.2,3378.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="78f2fb55-7734-488d-91b5-7409d906cba9" Version="V2">
+                  <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Always]" DisplayName="Chrome CESTicketReport - All UDFs" HealingAgentBehavior="[UiPath.UIAutomationNext.Enums.NHealingAgentBehavior.Disabled]" sap:VirtualizedContainerService.HintSize="651.2,3368" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="78f2fb55-7734-488d-91b5-7409d906cba9" Version="V2">
                     <uix:NApplicationCard.Body>
                       <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="617.6,3224.8" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="617.6,3214.4" sap2010:WorkflowViewState.IdRef="Sequence_33">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -248,13 +249,13 @@
                               </uix:VerifyExecutionOptions>
                             </uix:NClick.VerifyOptions>
                           </uix:NClick>
-                          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Save As" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="584,2860.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="Simulate" ScopeGuid="01cb8f5f-6eae-4990-ba13-8af142d4ba3a" Version="V2">
+                          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Save As" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="584,2850.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="Simulate" ScopeGuid="01cb8f5f-6eae-4990-ba13-8af142d4ba3a" Version="V2">
                             <uix:NApplicationCard.Body>
                               <ActivityAction x:TypeArguments="x:Object">
                                 <ActivityAction.Argument>
                                   <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                 </ActivityAction.Argument>
-                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="550.4,2707.2" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="550.4,2696.8" sap2010:WorkflowViewState.IdRef="Sequence_35">
                                   <Sequence.Variables>
                                     <Variable x:TypeArguments="si:FileInfo" Name="DownloadedFile" />
                                   </Sequence.Variables>
@@ -263,7 +264,7 @@
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="[UiPath.UIAutomationNext.Enums.NClickMode.None]" ClipboardMode="Never" DisplayName="Type Into 'File name'" EmptyFieldMode="[UiPath.UIAutomationNext.Enums.NEmptyFieldMode.SingleLine]" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="516.8,241.6" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="SameAsCard" ScopeIdentifier="01cb8f5f-6eae-4990-ba13-8af142d4ba3a" Text="[PDFfilePath &amp; pdfName]" Version="V5">
+                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="[UiPath.UIAutomationNext.Enums.NClickMode.None]" ClipboardMode="Never" DisplayName="Type Into 'File name'" EmptyFieldMode="[UiPath.UIAutomationNext.Enums.NEmptyFieldMode.SingleLine]" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="516.8,293.6" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="SameAsCard" ScopeIdentifier="01cb8f5f-6eae-4990-ba13-8af142d4ba3a" Text="[PDFfilePath &amp; pdfName]" Version="V5">
                                     <uix:NTypeInto.Target>
                                       <uix:TargetAnchorable CVScreenId="cd5eb367-c247-4a80-81ea-53821cbe876d" ContentHash="YJVn0XLjNE69Zj1cKnNT2A" CvElementArea="132, 355, 623, 24" CvType="InputBox" DesignTimeRectangle="136, 359, 599, 17" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;&lt;wnd ctrlid='1001' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' /&gt;" Guid="1cb6ce60-9d91-451d-8248-c9a2c1069a8f" InformativeScreenshot="da6764281d295ecc07e40fa08e8751bf.png" IsResponsive="True" Reference="2HNzGrMgqE2vTNIlI6sEcw/a4wV-8UJbkmd-KSKInsZbA" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
                                         <uix:TargetAnchorable.Anchors>
@@ -274,7 +275,7 @@
                                       </uix:TargetAnchorable>
                                     </uix:NTypeInto.Target>
                                     <uix:NTypeInto.VerifyOptions>
-                                      <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                      <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" ExpectedText="[PDFfilePath &amp; pdfName]" Mode="Appears">
                                         <uix:VerifyExecutionTypeIntoOptions.Retry>
                                           <InArgument x:TypeArguments="x:Boolean" />
                                         </uix:VerifyExecutionTypeIntoOptions.Retry>
@@ -284,41 +285,27 @@
                                       </uix:VerifyExecutionTypeIntoOptions>
                                     </uix:NTypeInto.VerifyOptions>
                                   </uix:NTypeInto>
-                                  <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="516.8,565.6" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" InteractionMode="WindowMessages" ScopeIdentifier="01cb8f5f-6eae-4990-ba13-8af142d4ba3a" Shortcuts="[d(hk)][k(Tab)][u(hk)]" Version="V5">
-                                    <uix:NKeyboardShortcuts.VerifyOptions>
-                                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                                        <uix:VerifyExecutionOptions.Retry>
-                                          <InArgument x:TypeArguments="x:Boolean" />
-                                        </uix:VerifyExecutionOptions.Retry>
-                                        <uix:VerifyExecutionOptions.Timeout>
-                                          <InArgument x:TypeArguments="x:Double" />
-                                        </uix:VerifyExecutionOptions.Timeout>
-                                      </uix:VerifyExecutionOptions>
-                                    </uix:NKeyboardShortcuts.VerifyOptions>
-                                  </uix:NKeyboardShortcuts>
-                                  <ui:GetLastDownloadedFile FileResource="{x:Null}" IgnoreFiles="{x:Null}" Timeout="{x:Null}" DisplayName="Wait for Download" DownloadFolder="[pdfFIlePath]" File="[DownloadedFile]" sap:VirtualizedContainerService.HintSize="516.8,645.6" sap2010:WorkflowViewState.IdRef="GetLastDownloadedFile_1">
+                                  <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="516.8,451.2" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" InteractionMode="WindowMessages" ScopeIdentifier="01cb8f5f-6eae-4990-ba13-8af142d4ba3a" Shortcuts="[d(hk)][k(Tab)][u(hk)]" Version="V5" />
+                                  <Delay sap2010:Annotation.AnnotationText="I tried several methods to get a check app state activity to work on this window." Duration="00:00:01" sap:VirtualizedContainerService.HintSize="516.8,166.4" sap2010:WorkflowViewState.IdRef="Delay_3">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </Delay>
+                                  <ui:GetLastDownloadedFile FileResource="{x:Null}" IgnoreFiles="{x:Null}" DisplayName="Wait for Download" DownloadFolder="[pdfFIlePath]" File="[DownloadedFile]" sap:VirtualizedContainerService.HintSize="516.8,531.2" sap2010:WorkflowViewState.IdRef="GetLastDownloadedFile_1" Timeout="30">
                                     <ui:GetLastDownloadedFile.Body>
                                       <ActivityAction>
-                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,355.2" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,240.8" sap2010:WorkflowViewState.IdRef="Sequence_26">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '&amp;Save'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382.4,295.2" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="01cb8f5f-6eae-4990-ba13-8af142d4ba3a" Version="V5">
+                                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '&amp;Save'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382.4,180.8" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="01cb8f5f-6eae-4990-ba13-8af142d4ba3a" Version="V5">
                                             <uix:NClick.Target>
                                               <uix:TargetAnchorable CVScreenId="cd5eb367-c247-4a80-81ea-53821cbe876d" ContentHash="Mml_2waSpUa4-3_5udZifA" CvElementArea="552, 425, 88, 26" CvTextArea="582, 431, 26, 12" CvTextArgument="Save" CvType="Button" DesignTimeRectangle="551, 425, 88, 26" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Save' /&gt;" Guid="b2779601-9f19-4cdd-af16-5f2909650b1c" InformativeScreenshot="9738ec48c3fa88cd8d8cd649137370f8.png" Reference="2HNzGrMgqE2vTNIlI6sEcw/nI-c2txCS0OdbwZY-gfS6A" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
                                             </uix:NClick.Target>
-                                            <uix:NClick.VerifyOptions>
-                                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                                                <uix:VerifyExecutionOptions.Retry>
-                                                  <InArgument x:TypeArguments="x:Boolean" />
-                                                </uix:VerifyExecutionOptions.Retry>
-                                                <uix:VerifyExecutionOptions.Timeout>
-                                                  <InArgument x:TypeArguments="x:Double" />
-                                                </uix:VerifyExecutionOptions.Timeout>
-                                              </uix:VerifyExecutionOptions>
-                                            </uix:NClick.VerifyOptions>
                                           </uix:NClick>
                                         </Sequence>
                                       </ActivityAction>
@@ -332,7 +319,7 @@
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                   </ui:LogMessage>
-                                  <uix:NCheckState sap2010:Annotation.AnnotationText="Sometimes the download window created a new chrome window.  It shoudl only close a google with the title &quot;New Tab&quot;" DisplayName="Check App State 'New Tab'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="516.8,1020" sap2010:WorkflowViewState.IdRef="NCheckState_1" IsLoose="True" Version="V5">
+                                  <uix:NCheckState sap2010:Annotation.AnnotationText="Sometimes the download window created a new chrome window.  It shoudl only close a google with the title &quot;New Tab&quot;" DisplayName="Check App State 'New Tab'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="516.8,1020" sap2010:WorkflowViewState.IdRef="NCheckState_1" IsLoose="True" Timeout="2" Version="V5">
                                     <uix:NCheckState.IfExists>
                                       <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="483.2,573.6" sap2010:WorkflowViewState.IdRef="Sequence_36">
                                         <sap:WorkflowViewStateService.ViewState>
@@ -483,7 +470,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,225.6" sap2010:WorkflowViewState.IdRef="Sequence_25">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="448,225.6" sap2010:WorkflowViewState.IdRef="Sequence_25">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
