@@ -321,7 +321,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap:VirtualizedContainerService.HintSize="1208.8,13464.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap:VirtualizedContainerService.HintSize="1208.8,13465.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Default="0" Name="loopCounter" />
       <Variable x:TypeArguments="scg:Dictionary(x:Int32, x:String)" Default="[New Dictionary(of Int32, String)]" Name="extractedresults">
@@ -339,7 +339,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign sap:VirtualizedContainerService.HintSize="1208.8,112.8" sap2010:WorkflowViewState.IdRef="Assign_12">
+    <Assign sap:VirtualizedContainerService.HintSize="1208.8,113.6" sap2010:WorkflowViewState.IdRef="Assign_12">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Int32">[loopCounter]</OutArgument>
       </Assign.To>
@@ -918,7 +918,7 @@
                                                                 <InArgument x:TypeArguments="x:String">["Final results from Try #" &amp; loopCounter &amp; ": " &amp; summarizedExtractedResults &amp; OpenInvoiceOutput]</InArgument>
                                                               </Assign.Value>
                                                             </Assign>
-                                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,167.2" sap2010:WorkflowViewState.IdRef="LogMessage_24" Level="Fatal" Message="[summarizedExtractedResults]" />
+                                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,167.2" sap2010:WorkflowViewState.IdRef="LogMessage_24" Level="Warn" Message="[summarizedExtractedResults]" />
                                                           </Sequence>
                                                         </TryCatch.Finally>
                                                       </TryCatch>
@@ -1156,7 +1156,7 @@
                                                 </uix:VerifyExecutionOptions>
                                               </uix:NClick.VerifyOptions>
                                             </uix:NClick>
-                                            <uix:NCheckState sap2010:Annotation.AnnotationText="This is here for delay.  If the page isn't refreshed, the loop will end" DisplayName="Check App State 'Current Filters'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="483.2,926.4" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="af765b0f-fab5-432c-8b61-4eb21bf3f298" Version="V5">
+                                            <uix:NCheckState sap2010:Annotation.AnnotationText="This is here for delay.  If the page isn't refreshed, the loop will end" DisplayName="Check App State 'Current Filters'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="483.2,926.4" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="af765b0f-fab5-432c-8b61-4eb21bf3f298" Timeout="15" Version="V5">
                                               <uix:NCheckState.IfExists>
                                                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,348" sap2010:WorkflowViewState.IdRef="Sequence_132">
                                                   <sap:WorkflowViewStateService.ViewState>
