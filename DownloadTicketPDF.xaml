@@ -193,10 +193,10 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="790.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;Starting download of file to: &quot; + PDFfilePath]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="790.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="{x:Null}" Message="[&quot;Starting download of file to: &quot; + PDFfilePath]" />
     <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="790.4,4010.4" sap2010:WorkflowViewState.IdRef="TryCatch_2">
       <TryCatch.Try>
-        <ui:GetActiveWindow ApplicationWindow="{x:Null}" DisplayName="Get Active Window" sap:VirtualizedContainerService.HintSize="753.6,3756" sap2010:WorkflowViewState.IdRef="GetActiveWindow_1">
+        <ui:GetActiveWindow ApplicationWindow="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get Active Window" sap:VirtualizedContainerService.HintSize="753.6,3756" sap2010:WorkflowViewState.IdRef="GetActiveWindow_1">
           <ui:GetActiveWindow.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
@@ -222,7 +222,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </Delay>
-                  <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Always]" DisplayName="Chrome CESTicketReport - All UDFs" HealingAgentBehavior="[UiPath.UIAutomationNext.Enums.NHealingAgentBehavior.Disabled]" sap:VirtualizedContainerService.HintSize="651.2,3368" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="78f2fb55-7734-488d-91b5-7409d906cba9" Version="V2">
+                  <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Always]" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Chrome CESTicketReport - All UDFs" HealingAgentBehavior="[UiPath.UIAutomationNext.Enums.NHealingAgentBehavior.Disabled]" sap:VirtualizedContainerService.HintSize="651.2,3368" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="{x:Null}" InteractionMode="DebuggerApi" IsIncognito="{x:Null}" OpenMode="Never" OutUiElement="{x:Null}" ScopeGuid="78f2fb55-7734-488d-91b5-7409d906cba9" Timeout="{x:Null}" UserDataFolderMode="{x:Null}" UserDataFolderPath="{x:Null}" Version="V2" WebDriverMode="{x:Null}">
                     <uix:NApplicationCard.Body>
                       <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>
@@ -234,7 +234,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Icon'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="584,304" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="78f2fb55-7734-488d-91b5-7409d906cba9" Version="V5">
+                          <uix:NClick ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickType="Single" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Click 'Icon'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="584,304" sap2010:WorkflowViewState.IdRef="NClick_1" InUiElement="{x:Null}" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" OutUiElement="{x:Null}" ScopeIdentifier="78f2fb55-7734-488d-91b5-7409d906cba9" Timeout="{x:Null}" UnblockInput="{x:Null}" Version="V5">
                             <uix:NClick.Target>
                               <uix:TargetAnchorable BrowserURL="s3.amazonaws.com/openinvoice-uat.ba.enverus.com/3665451/receipt/2025-09-09/2bc8e8688a0344d0ae9aafa61269ea5d" CVScreenId="f81bd2e1-9ee5-4c17-a409-dc51d4812f13" ContentHash="PKXy4xcljkKjYJfcSYnMUg" CvElementArea="1814, 83, 20, 21" CvType="Icon" DesignTimeRectangle="1812, 81, 24, 25" ElementType="Icon" ElementVisibilityArgument="Interactive" Guid="8727baab-9f5c-4746-9b69-3509d8386047" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAZCAYAAAArK+5dAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAB8SURBVEhL7dDRCYAwDEXRDtY5O1EWygRKCoEQaN9TKir046AEybUttdbjSSUPVtsB6FsBEenyfGYHoPcDrbXO3mMgzmeogKr2pwfiLH+fwYDxhR5glxsqYDxyZbmhA4a992gYYP/UT5bnDgYYtwLxzpHZSYeBVXYA+n/gBJ8HXTnodU5/AAAAAElFTkSuQmCC" InformativeScreenshot="cecc314de187b761e3f962d93b891b09.png" Reference="2HNzGrMgqE2vTNIlI6sEcw/oP3jl6_fy0KK3oCco_FPzA" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='attachmentView' title='CESTicketReport - All UDFs' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V6" WaitForReadyArgument="Interactive" />
                             </uix:NClick.Target>
@@ -249,7 +249,7 @@
                               </uix:VerifyExecutionOptions>
                             </uix:NClick.VerifyOptions>
                           </uix:NClick>
-                          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Save As" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="584,2850.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="Simulate" ScopeGuid="01cb8f5f-6eae-4990-ba13-8af142d4ba3a" Version="V2">
+                          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Save As" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="584,2850.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InUiElement="{x:Null}" InteractionMode="Simulate" IsIncognito="{x:Null}" OpenMode="{x:Null}" OutUiElement="{x:Null}" ScopeGuid="01cb8f5f-6eae-4990-ba13-8af142d4ba3a" Timeout="{x:Null}" UserDataFolderMode="{x:Null}" UserDataFolderPath="{x:Null}" Version="V2" WebDriverMode="{x:Null}">
                             <uix:NApplicationCard.Body>
                               <ActivityAction x:TypeArguments="x:Object">
                                 <ActivityAction.Argument>
@@ -264,7 +264,7 @@
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="[UiPath.UIAutomationNext.Enums.NClickMode.None]" ClipboardMode="Never" DisplayName="Type Into 'File name'" EmptyFieldMode="[UiPath.UIAutomationNext.Enums.NEmptyFieldMode.SingleLine]" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="516.8,293.6" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="SameAsCard" ScopeIdentifier="01cb8f5f-6eae-4990-ba13-8af142d4ba3a" Text="[PDFfilePath &amp; pdfName]" Version="V5">
+                                  <uix:NTypeInto ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickBeforeMode="[UiPath.UIAutomationNext.Enums.NClickMode.None]" ClipboardMode="Never" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type Into 'File name'" EmptyFieldMode="[UiPath.UIAutomationNext.Enums.NEmptyFieldMode.None]" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="516.8,293.6" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InUiElement="{x:Null}" InteractionMode="SameAsCard" OutUiElement="{x:Null}" ScopeIdentifier="01cb8f5f-6eae-4990-ba13-8af142d4ba3a" SecureText="{x:Null}" Text="[PDFfilePath &amp; pdfName]" Timeout="{x:Null}" Version="V5">
                                     <uix:NTypeInto.Target>
                                       <uix:TargetAnchorable CVScreenId="cd5eb367-c247-4a80-81ea-53821cbe876d" ContentHash="YJVn0XLjNE69Zj1cKnNT2A" CvElementArea="132, 355, 623, 24" CvType="InputBox" DesignTimeRectangle="136, 359, 599, 17" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;&lt;wnd ctrlid='1001' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' /&gt;" Guid="1cb6ce60-9d91-451d-8248-c9a2c1069a8f" InformativeScreenshot="da6764281d295ecc07e40fa08e8751bf.png" IsResponsive="True" Reference="2HNzGrMgqE2vTNIlI6sEcw/a4wV-8UJbkmd-KSKInsZbA" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
                                         <uix:TargetAnchorable.Anchors>
@@ -285,7 +285,7 @@
                                       </uix:VerifyExecutionTypeIntoOptions>
                                     </uix:NTypeInto.VerifyOptions>
                                   </uix:NTypeInto>
-                                  <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="516.8,451.2" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" InteractionMode="WindowMessages" ScopeIdentifier="01cb8f5f-6eae-4990-ba13-8af142d4ba3a" Shortcuts="[d(hk)][k(Tab)][u(hk)]" Version="V5" />
+                                  <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayBetweenShortcuts="{x:Null}" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="516.8,451.2" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" InUiElement="{x:Null}" InteractionMode="WindowMessages" OutUiElement="{x:Null}" ScopeIdentifier="01cb8f5f-6eae-4990-ba13-8af142d4ba3a" Shortcuts="[d(hk)][k(Tab)][u(hk)]" ShortcutsArgument="{x:Null}" Timeout="{x:Null}" Version="V5" />
                                   <Delay sap2010:Annotation.AnnotationText="I tried several methods to get a check app state activity to work on this window." Duration="00:00:01" sap:VirtualizedContainerService.HintSize="516.8,166.4" sap2010:WorkflowViewState.IdRef="Delay_3">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -293,7 +293,7 @@
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                   </Delay>
-                                  <ui:GetLastDownloadedFile FileResource="{x:Null}" IgnoreFiles="{x:Null}" DisplayName="Wait for Download" DownloadFolder="[pdfFIlePath]" File="[DownloadedFile]" sap:VirtualizedContainerService.HintSize="516.8,531.2" sap2010:WorkflowViewState.IdRef="GetLastDownloadedFile_1" Timeout="30">
+                                  <ui:GetLastDownloadedFile DisplayName="Wait for Download" DownloadFolder="[pdfFIlePath]" File="[DownloadedFile]" FileResource="{x:Null}" sap:VirtualizedContainerService.HintSize="516.8,531.2" sap2010:WorkflowViewState.IdRef="GetLastDownloadedFile_1" IgnoreFiles="{x:Null}" Timeout="30">
                                     <ui:GetLastDownloadedFile.Body>
                                       <ActivityAction>
                                         <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,240.8" sap2010:WorkflowViewState.IdRef="Sequence_26">
@@ -302,7 +302,7 @@
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '&amp;Save'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382.4,180.8" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="01cb8f5f-6eae-4990-ba13-8af142d4ba3a" Version="V5">
+                                          <uix:NClick ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickType="Single" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Click '&amp;Save'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382.4,180.8" sap2010:WorkflowViewState.IdRef="NClick_4" InUiElement="{x:Null}" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" OutUiElement="{x:Null}" ScopeIdentifier="01cb8f5f-6eae-4990-ba13-8af142d4ba3a" Timeout="{x:Null}" UnblockInput="{x:Null}" Version="V5">
                                             <uix:NClick.Target>
                                               <uix:TargetAnchorable CVScreenId="cd5eb367-c247-4a80-81ea-53821cbe876d" ContentHash="Mml_2waSpUa4-3_5udZifA" CvElementArea="552, 425, 88, 26" CvTextArea="582, 431, 26, 12" CvTextArgument="Save" CvType="Button" DesignTimeRectangle="551, 425, 88, 26" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Save' /&gt;" Guid="b2779601-9f19-4cdd-af16-5f2909650b1c" InformativeScreenshot="9738ec48c3fa88cd8d8cd649137370f8.png" Reference="2HNzGrMgqE2vTNIlI6sEcw/nI-c2txCS0OdbwZY-gfS6A" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
                                             </uix:NClick.Target>
@@ -319,7 +319,7 @@
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                   </ui:LogMessage>
-                                  <uix:NCheckState sap2010:Annotation.AnnotationText="Sometimes the download window created a new chrome window.  It shoudl only close a google with the title &quot;New Tab&quot;" DisplayName="Check App State 'New Tab'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="516.8,1020" sap2010:WorkflowViewState.IdRef="NCheckState_1" IsLoose="True" Timeout="2" Version="V5">
+                                  <uix:NCheckState sap2010:Annotation.AnnotationText="Sometimes the download window created a new chrome window.  It shoudl only close a google with the title &quot;New Tab&quot;" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Check App State 'New Tab'" Exists="{x:Null}" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="516.8,1020" sap2010:WorkflowViewState.IdRef="NCheckState_1" InUiElement="{x:Null}" IsLoose="True" OutUiElement="{x:Null}" Result="{x:Null}" Timeout="2" Version="V5">
                                     <uix:NCheckState.IfExists>
                                       <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="483.2,573.6" sap2010:WorkflowViewState.IdRef="Sequence_36">
                                         <sap:WorkflowViewStateService.ViewState>
@@ -327,8 +327,8 @@
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[&quot;Closing new browser&quot;]" />
-                                        <uix:NApplicationCard sap2010:Annotation.AnnotationText="Sometimes the download window created a new chrome window.  It shoudl only close a google with the title &quot;New Tab&quot;" AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Always]" DisplayName="Chrome New Tab" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="449.6,339.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Never]" ScopeGuid="2fa50107-23e1-462e-8911-570297fa0de2" Version="V2">
+                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="{x:Null}" Message="[&quot;Closing new browser&quot;]" />
+                                        <uix:NApplicationCard sap2010:Annotation.AnnotationText="Sometimes the download window created a new chrome window.  It shoudl only close a google with the title &quot;New Tab&quot;" AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Always]" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Chrome New Tab" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="449.6,339.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InUiElement="{x:Null}" InteractionMode="DebuggerApi" IsIncognito="{x:Null}" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Never]" OutUiElement="{x:Null}" ScopeGuid="2fa50107-23e1-462e-8911-570297fa0de2" Timeout="{x:Null}" UserDataFolderMode="{x:Null}" UserDataFolderPath="{x:Null}" Version="V2" WebDriverMode="{x:Null}">
                                           <uix:NApplicationCard.Body>
                                             <ActivityAction x:TypeArguments="x:Object">
                                               <ActivityAction.Argument>

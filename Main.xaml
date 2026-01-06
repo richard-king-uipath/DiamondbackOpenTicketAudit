@@ -132,12 +132,12 @@
                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CreateResultsFile - Invoke Workflow File (CreateResultsFile.xaml)" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="CreateResultsFile.xaml">
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Create Technical Results File" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="CreateResultsFile.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_TemplateFilePath">Data\Input\ResultsTemplate.xlsx</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_TemplateFilePath">Data\Input\TechnicalResultsTemplate.xlsx</InArgument>
                         <InArgument x:TypeArguments="x:String" x:Key="in_ResultsFolder">[config("FolderPathForResultsFiles").ToString]</InArgument>
                         <OutArgument x:TypeArguments="x:String" x:Key="out_ResultsFilePath">[TechnicalResultsFilePath]</OutArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_FileName">OT Technical Results</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_FileName">[Config("TechnicalResultsFileName").ToString]</InArgument>
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
                     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Create Business ResultsFile - Invoke Workflow File (CreateResultsFile.xaml)" sap:VirtualizedContainerService.HintSize="416,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="CreateResultsFile.xaml">
@@ -145,7 +145,7 @@
                         <InArgument x:TypeArguments="x:String" x:Key="in_TemplateFilePath">Data\Input\BusinessResultsTemplate.xlsx</InArgument>
                         <InArgument x:TypeArguments="x:String" x:Key="in_ResultsFolder">[config("FolderPathForResultsFiles").ToString]</InArgument>
                         <OutArgument x:TypeArguments="x:String" x:Key="out_ResultsFilePath">[BusinessResultsFilePath]</OutArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_FileName">OT Business Results</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_FileName">[Config("BusinessResultsFileName").tostring]</InArgument>
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
                   </Sequence>
@@ -174,7 +174,7 @@
         <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="553.6,1016" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>

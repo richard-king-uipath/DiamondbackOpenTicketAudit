@@ -93,7 +93,7 @@
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="AddExcelFormulas" sap:VirtualizedContainerService.HintSize="1062.4,1355.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="AddExcelFormulas" sap:VirtualizedContainerService.HintSize="1017.6000000000001,1355.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -118,7 +118,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Delay>
-            <ueab:ExcelApplicationCard ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" EditPassword="{x:Null}" sap:VirtualizedContainerService.HintSize="500.8,996" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" Password="{x:Null}" ResizeWindow="None" TemplatePath="Data\Input\ResultsTemplate.xlsx" UseTemplate="True" WorkbookPath="[inTechnicalReportPath]">
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="500.8,996" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" TemplatePath="Data\Input\ResultsTemplate.xlsx" UseTemplate="True" WorkbookPath="[inTechnicalReportPath]">
               <ueab:ExcelApplicationCard.Body>
                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                   <ActivityAction.Argument>
@@ -130,9 +130,9 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Sheet1&quot;).Cell(&quot;H2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,192" sap2010:WorkflowViewState.IdRef="WriteCellX_1" Value="[&quot;=VLOOKUP(A2,'Correct Answers'!A:B,2,FALSE)&quot;]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Sheet1&quot;).Cell(&quot;I2&quot;)]" DisplayName="Write Cell - Correct Results" sap:VirtualizedContainerService.HintSize="433.6,192" sap2010:WorkflowViewState.IdRef="WriteCellX_1" Value="[&quot;=VLOOKUP(A2,'Correct Answers'!A:B,2,FALSE)&quot;]" />
                     <ueab:AutoFillX DisplayName="Auto Fill" sap:VirtualizedContainerService.HintSize="433.6,122.4" sap2010:WorkflowViewState.IdRef="AutoFillX_1" StartRange="[Excel.Sheet(&quot;Sheet1&quot;).Range(&quot;H2&quot;)]" />
-                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Sheet1&quot;).Cell(&quot;I2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,192" sap2010:WorkflowViewState.IdRef="WriteCellX_2" Value="[&quot;=IF(H2=F2,&quot;&quot;Pass&quot;&quot;,&quot;&quot;Fail&quot;&quot;)&quot;]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Sheet1&quot;).Cell(&quot;J2&quot;)]" DisplayName="Write Cell - Pass-Fail" sap:VirtualizedContainerService.HintSize="433.6,192" sap2010:WorkflowViewState.IdRef="WriteCellX_2" Value="[&quot;=IF(H2=F2,&quot;&quot;Pass&quot;&quot;,&quot;&quot;Fail&quot;&quot;)&quot;]" />
                     <ueab:AutoFillX DisplayName="Auto Fill" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="AutoFillX_2" StartRange="[Excel.Sheet(&quot;Sheet1&quot;).Range(&quot;I2&quot;)]" />
                   </Sequence>
                 </ActivityAction>

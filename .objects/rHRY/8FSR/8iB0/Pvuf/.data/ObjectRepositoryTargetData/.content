@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="CPSARYOK7kKMuK6TErIJmQ" Reference="2HNzGrMgqE2vTNIlI6sEcw/PvufzYVV-EOsoJYCd-33oQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="uat.openinvoice.com/docp/public/OILogin.xhtml" CVScreenId="9f471e4d-e38b-49e8-aeca-019b07534068" CvElementArea="939, 580, 59, 31" CvTextArea="950, 588, 35, 13" CvTextArgument="Sign In" CvType="Button" DesignTimeRectangle="941, 581, 54, 28" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='loginBtn' tag='BUTTON' /&gt;" Guid="1387de8a-cf16-441a-b15a-a940d3584032" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="ac91d142d22d525b9f9359bac6395221.png" xmlns="">0j4mgZQNm80KmJUxEnRTLBg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

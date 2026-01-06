@@ -273,7 +273,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="896.8000000000001,2952.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1017.6000000000001,3430.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd2:DataTable" Name="ticketList" />
     </Sequence.Variables>
@@ -282,13 +282,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Chrome OpenInvoice" HealingAgentBehavior="[UiPath.UIAutomationNext.Enums.NHealingAgentBehavior.Job]" sap:VirtualizedContainerService.HintSize="584,2929.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="71d6f080-520c-45b2-aefa-69417aad2f1e" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Chrome OpenInvoice" HealingAgentBehavior="[UiPath.UIAutomationNext.Enums.NHealingAgentBehavior.Job]" sap:VirtualizedContainerService.HintSize="584,3407.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="71d6f080-520c-45b2-aefa-69417aad2f1e" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="550.4,2724" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="550.4,3201.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="Username" />
               <Variable x:TypeArguments="ss:SecureString" Name="Password" />
@@ -299,7 +299,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[inCredentialName]" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="516.8,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[Password]" Username="[Username]" />
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" ClipboardMode="Never" DisplayName="Type Into 'Username'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="516.8,241.6" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="SameAsCard" ScopeIdentifier="71d6f080-520c-45b2-aefa-69417aad2f1e" Text="[Username]" Version="V5">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" ClipboardMode="Never" DisplayName="Type Into 'Username'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="516.8,293.6" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="SameAsCard" ScopeIdentifier="71d6f080-520c-45b2-aefa-69417aad2f1e" Text="[Username]" Version="V5">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="uat.openinvoice.com/docp/public/OILogin.xhtml" ContentHash="QeiAi27LYk-TSOF-gJHDWw" DesignTimeRectangle="238, 528, 398, 34" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='j_username' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='j_username' tag='INPUT' type='text' class='form-control' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="0e964429-c91e-4dbc-82df-107424e851bf" InformativeScreenshot="e83562b0d652dfc0f526e3886106cbf2.png" IsResponsive="True" Reference="2HNzGrMgqE2vTNIlI6sEcw/K51Z8kP4FkKejueFfMFVGg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -310,7 +310,7 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
               <uix:NTypeInto.VerifyOptions>
-                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" ExpectedText="[Username]" Mode="Appears">
                   <uix:VerifyExecutionTypeIntoOptions.Retry>
                     <InArgument x:TypeArguments="x:Boolean" />
                   </uix:VerifyExecutionTypeIntoOptions.Retry>
@@ -326,7 +326,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" ClipboardMode="Never" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="516.8,241.6" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="SameAsCard" ScopeIdentifier="71d6f080-520c-45b2-aefa-69417aad2f1e" SecureText="[Password]" Version="V5">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" ClipboardMode="Never" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="516.8,293.6" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="SameAsCard" ScopeIdentifier="71d6f080-520c-45b2-aefa-69417aad2f1e" SecureText="[Password]" Version="V5">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="uat.openinvoice.com/docp/public/OILogin.xhtml" ContentHash="qnIJ0-xxpkmsjdzvDSJ7Fg" DesignTimeRectangle="238, 611, 398, 34" ElementType="InputBoxPassword" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='j_password' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='j_password' tag='INPUT' type='password' class='form-control' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="6a28ceb5-022a-4201-aa5e-2da8ac086c8b" InformativeScreenshot="f23bfcf60712f781dd1c05548e20cd66.png" Reference="2HNzGrMgqE2vTNIlI6sEcw/df00Ab5-aka2RuM3-Es09g" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -337,7 +337,7 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
               <uix:NTypeInto.VerifyOptions>
-                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" ExpectedText="[Nothing]" Mode="Appears">
                   <uix:VerifyExecutionTypeIntoOptions.Retry>
                     <InArgument x:TypeArguments="x:Boolean" />
                   </uix:VerifyExecutionTypeIntoOptions.Retry>
@@ -353,15 +353,19 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NTypeInto>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Sign In'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="516.8,304" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="71d6f080-520c-45b2-aefa-69417aad2f1e" Version="V5">
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="516.8,420" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" InteractionMode="HardwareEvents" ScopeIdentifier="71d6f080-520c-45b2-aefa-69417aad2f1e" Shortcuts="[d(hk)][k(Tab)][u(hk)][d(hk)][k(Tab)][u(hk)][d(hk)][k(Tab)][u(hk)]" Version="V5" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Sign In'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="516.8,257.6" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="71d6f080-520c-45b2-aefa-69417aad2f1e" Version="V5">
               <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="uat.openinvoice.com/docp/public/OILogin.xhtml" ContentHash="5lvY4pkyk0GoQTrEP2BnYQ" DesignTimeRectangle="767, 711, 67, 34" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='loginBtn' tag='BUTTON' /&gt;" Guid="1ce84f92-75dd-48cb-a0e7-aa1501057a4b" InformativeScreenshot="29f70530839455d47105cb4651c9e2cd.png" Reference="2HNzGrMgqE2vTNIlI6sEcw/eQrmxR6Zu0yLUkNGbYC_9A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                <uix:TargetAnchorable BrowserURL="uat.openinvoice.com/docp/public/OILogin.xhtml" CVScreenId="9f471e4d-e38b-49e8-aeca-019b07534068" ContentHash="uEAd-gsDIEyfbSv83d6gjw" CvElementArea="939, 580, 59, 31" CvTextArea="950, 588, 35, 13" CvTextArgument="Sign In" CvType="Button" DesignTimeRectangle="941, 581, 54, 28" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='loginBtn' tag='BUTTON' /&gt;" Guid="1ce84f92-75dd-48cb-a0e7-aa1501057a4b" InformativeScreenshot="ac91d142d22d525b9f9359bac6395221.png" Reference="2HNzGrMgqE2vTNIlI6sEcw/eQrmxR6Zu0yLUkNGbYC_9A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NClick.Target>
               <uix:NClick.VerifyOptions>
-                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Disappears">
                   <uix:VerifyExecutionOptions.Retry>
                     <InArgument x:TypeArguments="x:Boolean" />
                   </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Target>
+                    <uix:TargetAnchorable BrowserURL="uat.openinvoice.com/docp/public/OILogin.xhtml" CVScreenId="9f471e4d-e38b-49e8-aeca-019b07534068" ContentHash="CPSARYOK7kKMuK6TErIJmQ" CvElementArea="939, 580, 59, 31" CvTextArea="950, 588, 35, 13" CvTextArgument="Sign In" CvType="Button" DesignTimeRectangle="941, 581, 54, 28" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='loginBtn' tag='BUTTON' /&gt;" Guid="1387de8a-cf16-441a-b15a-a940d3584032" InformativeScreenshot="ac91d142d22d525b9f9359bac6395221.png" Reference="2HNzGrMgqE2vTNIlI6sEcw/PvufzYVV-EOsoJYCd-33oQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
+                  </uix:VerifyExecutionOptions.Target>
                   <uix:VerifyExecutionOptions.Timeout>
                     <InArgument x:TypeArguments="x:Double" />
                   </uix:VerifyExecutionOptions.Timeout>
@@ -426,7 +430,7 @@
                 </Sequence>
               </uix:NCheckState.IfNotExists>
               <uix:NCheckState.Target>
-                <uix:TargetAnchorable BrowserURL="uat.openinvoice.com/docp/corp/main/login" CVScreenId="cf685ca1-a69e-443f-bf08-2b49374ee3bb" ContentHash="f5LswT-J90CrR63JrMovFQ" CvTextArea="358, 259, 252, 15" CvTextArgument="Still working on another device?" CvType="Text" DesignTimeRectangle="344, 258, 423, 20" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' isleaf='1' parentid='myContainer' tag='DIV' /&gt;" Guid="f9831b86-8e5b-44e8-9260-422f524fb8b7" InformativeScreenshot="8155be19abda708277532c781b5fdfb4.png" Reference="2HNzGrMgqE2vTNIlI6sEcw/EGAt32H3KEyratWEGy3npQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
+                <uix:TargetAnchorable BrowserURL="uat.openinvoice.com/docp/corp/main/login" CVScreenId="cf685ca1-a69e-443f-bf08-2b49374ee3bb" ContentHash="T1IaWI6TJkSK1L-KGqLv3Q" CvTextArea="358, 259, 252, 15" CvTextArgument="Still working on another device?" CvType="Text" DesignTimeRectangle="910, 187, 26, 25" ElementType="Text" ElementVisibilityArgument="Interactive" Guid="f9831b86-8e5b-44e8-9260-422f524fb8b7" InformativeScreenshot="773afd1c704ba2c1a94d53e16984ba8c.png" Reference="2HNzGrMgqE2vTNIlI6sEcw/EGAt32H3KEyratWEGy3npQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="CV" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NCheckState.Target>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -435,7 +439,7 @@
               </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
             <uix:NGoToUrl DisplayName="Go To URL - " sap:VirtualizedContainerService.HintSize="516.8,122.4" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" ScopeIdentifier="71d6f080-520c-45b2-aefa-69417aad2f1e" Url="[in_Config(&quot;OpenTicketStackURL&quot;).ToString]" Version="V5" />
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Tickets'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="516.8,295.2" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="71d6f080-520c-45b2-aefa-69417aad2f1e" Version="V5">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Tickets' on the Ticket Stack" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="516.8,295.2" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="71d6f080-520c-45b2-aefa-69417aad2f1e" Version="V5">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="uat-app.openinvoice.com/ticket" ContentHash="eaY3nRPDCkK-fPCToZv7aA" DesignTimeRectangle="508, 419, 43, 18" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Tickets' parentid='stack-*' tag='SPAN' /&gt;" Guid="609d403c-b013-49b1-8fe6-ff325b376890" InformativeScreenshot="5f7c9713873faf4a96c4516394a23458.png" Reference="2HNzGrMgqE2vTNIlI6sEcw/vgyyWzDHYk6aaMtjZ_S6lg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NClick.Target>

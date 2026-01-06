@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="f5LswT-J90CrR63JrMovFQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="T1IaWI6TJkSK1L-KGqLv3Q" Reference="2HNzGrMgqE2vTNIlI6sEcw/EGAt32H3KEyratWEGy3npQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="uat.openinvoice.com/docp/corp/main/login" CVScreenId="cf685ca1-a69e-443f-bf08-2b49374ee3bb" CvTextArea="358, 259, 252, 15" CvTextArgument="Still working on another device?" CvType="Text" DesignTimeRectangle="344, 258, 423, 20" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' isleaf='1' parentid='myContainer' tag='DIV' /&gt;" Guid="f9831b86-8e5b-44e8-9260-422f524fb8b7" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="8155be19abda708277532c781b5fdfb4.png" xmlns="">0Vscaa72IFkGFaM9PI28eOg</imageRef>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="uat.openinvoice.com/docp/corp/main/login" CVScreenId="cf685ca1-a69e-443f-bf08-2b49374ee3bb" CvTextArea="358, 259, 252, 15" CvTextArgument="Still working on another device?" CvType="Text" DesignTimeRectangle="910, 187, 26, 25" ElementType="Text" ElementVisibilityArgument="Interactive" Guid="f9831b86-8e5b-44e8-9260-422f524fb8b7" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="CV" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="773afd1c704ba2c1a94d53e16984ba8c.png" xmlns="">0IC7QYmroOk6ZU9DgaFuZzg</imageRef>
     </TargetAnchorable>
     <x:String x:Key="ActivityType">CheckState</x:String>
   </ObjectRepositoryTargetData.Data>
