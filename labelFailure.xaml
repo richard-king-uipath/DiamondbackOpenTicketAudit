@@ -207,19 +207,19 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap:VirtualizedContainerService.HintSize="996.0000000000001,3148" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap:VirtualizedContainerService.HintSize="1017.6000000000001,3216" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome OpenInvoice" HealingAgentBehavior="[UiPath.UIAutomationNext.Enums.NHealingAgentBehavior.Disabled]" sap:VirtualizedContainerService.HintSize="516.8,3124.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Never]" ScopeGuid="d76ceb9a-30bb-44ba-b2c8-72afcfe2cb1c" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome OpenInvoice" HealingAgentBehavior="[UiPath.UIAutomationNext.Enums.NHealingAgentBehavior.Disabled]" sap:VirtualizedContainerService.HintSize="516.8,3192.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Never]" ScopeGuid="d76ceb9a-30bb-44ba-b2c8-72afcfe2cb1c" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="483.2,2971.2" sap2010:WorkflowViewState.IdRef="Sequence_38">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="483.2,3039.2" sap2010:WorkflowViewState.IdRef="Sequence_38">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -303,10 +303,20 @@
                 </Sequence>
               </If.Else>
             </If>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Edit Header'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="449.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d76ceb9a-30bb-44ba-b2c8-72afcfe2cb1c" Version="V5">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Edit Header'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="449.6,257.6" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d76ceb9a-30bb-44ba-b2c8-72afcfe2cb1c" Version="V5">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="uat.openinvoice.com/docp/app/ticket/index.html" CVScreenId="fc6d9e8b-fe8d-4262-bd19-4e6f17ca9bd3" ContentHash="lYDy36UFr0-buNcIA7qJLQ" CvElementArea="39, 411, 86, 33" CvTextArea="50, 420, 64, 11" CvTextArgument="Edit Header" CvType="Button" DesignTimeRectangle="40, 412, 84, 30" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='editHeaderBtn' parentid='ticketHeaderCollapse' tag='A' /&gt;" Guid="df7a44ed-9a84-4247-833e-f2d8d429b651" InformativeScreenshot="f591c973959b45da61a4774c270b8e1d.png" Reference="2HNzGrMgqE2vTNIlI6sEcw/eNdXas2dWE6UebtyjrtM-A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="Verification target" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Target>
+                    <uix:TargetAnchorable BrowserURL="uat.openinvoice.com/docp/app/ticket/index.html" CVScreenId="75e8a868-1bea-4208-a01d-cbb36d766194" ContentHash="vDnL1EEIPk-EyIktBXfWoQ" CvTextArea="1219, 217, 70, 10" CvTextArgument="REQUISITIONER" CvType="Text" DesignTimeRectangle="1220, 217, 69, 12" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='orderedByNameLabel' tag='SPAN' innertext='Requisitioner' /&gt;" Guid="20c181ee-c782-4079-8d62-bf8a617ced74" InformativeScreenshot="c15409c57bb138140ead1a6395baf74f.png" Reference="2HNzGrMgqE2vTNIlI6sEcw/IZv_GPSEoUOMlc3VCooIpA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OpenInvoice' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="None" />
+                  </uix:VerifyExecutionOptions.Target>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
             </uix:NClick>
             <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Requisitioner  *'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="449.6,241.6" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="SameAsCard" ScopeIdentifier="d76ceb9a-30bb-44ba-b2c8-72afcfe2cb1c" Text="[in_CurrentRequisitioner]" Version="V5">
               <uix:NTypeInto.Target>

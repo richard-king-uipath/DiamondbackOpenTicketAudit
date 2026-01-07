@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Verification target",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "IZv_GPSEoUOMlc3VCooIpA",
+  "Reference": "2HNzGrMgqE2vTNIlI6sEcw/IZv_GPSEoUOMlc3VCooIpA",
+  "ParentRef": "2HNzGrMgqE2vTNIlI6sEcw/b0X1S0oDrUq4kHOOMgYboA",
+  "Created": "2026-01-07T21:59:42.3742804Z",
+  "Updated": "2026-01-07T21:59:42.3742804Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.19.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
